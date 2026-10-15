@@ -1,0 +1,2535 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vrum Motos | Loja de Motos em Ubá - MG | Novas e Seminovas</title>
+  <meta name="description" content="Vrum Motos em Ubá - MG. As melhores motos 0km e seminovas selecionadas com garantia, procedência e laudo 100% aprovado. Compre, venda ou troque sua moto hoje!" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Vrum Motos | Loja de Motos em Ubá - MG" />
+  <meta property="og:description" content="Estoque selecionado de motos em Ubá e região. Pegamos sua moto na troca com a melhor avaliação!" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Google Fonts: Syne, Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800;1,900&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@700;800;900&display=swap" rel="stylesheet" />
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            vrum: {
+              yellow: '#FFB800',
+              gold: '#FFA000',
+              lightyellow: '#FFE082',
+              dark: '#090C10',
+              surface: '#10151E',
+              card: '#161D28',
+              border: '#232C3B',
+              gray: '#8A95A5',
+              white: '#FFFFFF'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            outfit: ['Outfit', 'sans-serif'],
+            syne: ['Syne', 'sans-serif'],
+            montserrat: ['Montserrat', 'sans-serif']
+          },
+          boxShadow: {
+            'vrum-glow': '0 0 35px -5px rgba(255, 184, 0, 0.6)',
+            'vrum-subtle': '0 8px 30px -8px rgba(255, 184, 0, 0.35)',
+            'card-dark': '0 20px 45px -15px rgba(0, 0, 0, 0.8)',
+            'glow-yellow-sm': '0 0 15px rgba(255, 184, 0, 0.4)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #090C10;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #FFB800;
+      border-radius: 4px;
+    }
+
+    /* Scroll progress bar */
+    #scroll-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #FFB800, #FFE082, #FFB800);
+      z-index: 9999;
+      width: 0%;
+      transition: width 0.1s ease-out;
+    }
+
+    /* Hero Night Urban Background with Dynamic Lighting */
+    .hero-urban-bg {
+      background: radial-gradient(circle at 50% 30%, #172233 0%, #0D131C 55%, #07090D 100%);
+    }
+
+    /* Text Behind Subject (Depth Effect) */
+    .hero-giant-text {
+      position: absolute;
+      top: 48%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Montserrat', sans-serif;
+      font-style: italic;
+      font-weight: 900;
+      font-size: clamp(4.5rem, 14vw, 15rem);
+      letter-spacing: -0.04em;
+      line-height: 0.85;
+      text-transform: uppercase;
+      white-space: nowrap;
+      user-select: none;
+      pointer-events: none;
+      color: rgba(255, 255, 255, 0.08);
+      -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.18);
+      z-index: 5;
+      transition: opacity 0.5s ease, transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: transform, opacity;
+    }
+
+    /* Motorcycle Stage in Hero with 3D Perspective */
+    .bike-stage-hero {
+      position: relative;
+      width: 100%;
+      min-height: 420px;
+      height: 500px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      perspective: 1200px;
+      transform-style: preserve-3d;
+    }
+
+    .bike-hero-render {
+      position: absolute;
+      width: 100%;
+      max-width: 820px;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      transition: transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+                  opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), 
+                  filter 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.95));
+      user-select: none;
+      pointer-events: none;
+      transform-style: preserve-3d;
+      will-change: transform, opacity, filter;
+    }
+
+    /* Headlight Flare Animation */
+    .headlight-flare {
+      position: absolute;
+      width: 280px;
+      height: 140px;
+      background: radial-gradient(ellipse at center, rgba(255, 230, 160, 0.85) 0%, rgba(255, 184, 0, 0.4) 45%, rgba(255, 184, 0, 0) 75%);
+      filter: blur(16px);
+      pointer-events: none;
+      z-index: 15;
+      opacity: 0.85;
+      animation: headlight-pulse 3.5s ease-in-out infinite alternate;
+      transition: all 0.5s ease;
+    }
+    @keyframes headlight-pulse {
+      0% { opacity: 0.7; transform: scale(0.95); }
+      50% { opacity: 0.95; transform: scale(1.08); }
+      100% { opacity: 0.75; transform: scale(1.02); }
+    }
+
+    /* Soundwave Equalizer Animation */
+    .soundwave-bar {
+      width: 3px;
+      background: #FFB800;
+      border-radius: 2px;
+      display: inline-block;
+      animation: soundwave-jump 1s ease-in-out infinite alternate;
+    }
+    .soundwave-bar:nth-child(1) { height: 6px; animation-delay: 0.1s; }
+    .soundwave-bar:nth-child(2) { height: 14px; animation-delay: 0.3s; }
+    .soundwave-bar:nth-child(3) { height: 10px; animation-delay: 0.2s; }
+    .soundwave-bar:nth-child(4) { height: 18px; animation-delay: 0.4s; }
+    .soundwave-bar:nth-child(5) { height: 8px; animation-delay: 0.15s; }
+    @keyframes soundwave-jump {
+      0% { transform: scaleY(0.3); }
+      100% { transform: scaleY(1.4); }
+    }
+
+    /* Animation States for Ultra-Fluid Bike Glide & Entry */
+    .bike-hero-render.slide-out-left {
+      transform: translateX(-160px) scale(0.92) translateZ(-40px);
+      opacity: 0;
+      filter: blur(12px) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    }
+    .bike-hero-render.slide-out-right {
+      transform: translateX(160px) scale(0.92) translateZ(-40px);
+      opacity: 0;
+      filter: blur(12px) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    }
+    .bike-hero-render.slide-in-start-right {
+      transform: translateX(180px) scale(0.94) translateZ(-30px);
+      opacity: 0;
+      filter: blur(12px) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    }
+    .bike-hero-render.slide-in-start-left {
+      transform: translateX(-180px) scale(0.94) translateZ(-30px);
+      opacity: 0;
+      filter: blur(12px) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
+    }
+    .bike-hero-render.slide-in-active {
+      transform: translateX(0) scale(1) translateZ(0);
+      opacity: 1;
+      filter: drop-shadow(0 30px 45px rgba(0, 0, 0, 0.95)) blur(0px);
+    }
+
+    /* Ground Smoke & Shadow */
+    .ground-shadow-hero {
+      position: absolute;
+      bottom: 18px;
+      left: 8%;
+      width: 84%;
+      height: 35px;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.5) 45%, rgba(0,0,0,0) 75%);
+      border-radius: 50%;
+      filter: blur(6px);
+      pointer-events: none;
+      z-index: 6;
+      transition: transform 0.2s ease;
+    }
+
+    /* Pulse Glow Yellow */
+    @keyframes pulse-vrum {
+      0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 184, 0, 0.7);
+      }
+      50% {
+        box-shadow: 0 0 0 16px rgba(255, 184, 0, 0);
+      }
+    }
+    .btn-vrum-pulse {
+      animation: pulse-vrum 2.2s infinite;
+    }
+
+    /* Smoke visual effect */
+    .smoke-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 180px;
+      background: linear-gradient(to top, rgba(9, 12, 16, 0.95), transparent);
+      pointer-events: none;
+      z-index: 8;
+    }
+
+    /* Scroll Reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/css/motion-core.css">
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+
+  <!-- Schema.org SEO & GEO Data -->
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "AutoDealer",
+  "name": "Vrum Motos • Concessionária & Peças",
+  "description": "Compre sua moto zero km e seminova com as melhores taxas de financiamento da região.",
+  "telephone": "+55-32-99929-2311",
+  "url": "https://nexusflow.digital/vrum-motos/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Av. Paulista, 1000",
+    "addressLocality": "São Paulo",
+    "addressRegion": "SP",
+    "postalCode": "01310-100",
+    "addressCountry": "BR"
+  }
+}
+  </script>
+
+
+  <style>
+    /* Cult UI Shimmer Microinteraction */
+    .shimmer-btn {
+      position: relative;
+      overflow: hidden;
+    }
+    .shimmer-btn::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(60deg, rgba(255,255,255,0) 20%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 80%);
+      transform: rotate(25deg);
+      animation: shimmerSweep 4s infinite ease-in-out;
+    }
+    @keyframes shimmerSweep {
+      0% { left: -60%; }
+      30% { left: 140%; }
+      100% { left: 140%; }
+    }
+  </style>
+
+</head>
+<body class="bg-vrum-dark text-slate-100 font-sans antialiased selection:bg-vrum-yellow selection:text-vrum-dark">
+
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Top Announcement Bar (Ubá - MG Location & WhatsApp) -->
+  <div class="bg-black/90 text-gray-300 text-xs py-2 px-4 border-b border-gray-800/80 z-50 relative">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div class="flex items-center gap-2.5">
+        <span class="bg-vrum-yellow text-vrum-dark text-[10px] font-extrabold px-2.5 py-0.5 rounded uppercase tracking-wider shadow-glow-yellow-sm">
+          Ubá - MG
+        </span>
+        <span class="text-gray-300 font-medium">
+          <i class="fa-solid fa-location-dot text-vrum-yellow mr-1"></i> Av. Padre Arnaldo Jansen, 850 • Ubá - MG • Atendemos toda a Zona da Mata
+        </span>
+      </div>
+      <div class="flex items-center gap-4 text-xs font-semibold">
+        <span class="text-gray-400 hidden md:inline"><i class="fa-regular fa-clock text-vrum-yellow mr-1"></i> Seg a Sex 08h-18h | Sáb 08h-12h</span>
+        <a href="https://wa.me/5532999292311?text=Ol%C3%A1,%20gostaria%20de%20ver%20o%20estoque%20da%20Vrum%20Motos%20em%20Ub%C3%A1!" target="_blank" class="text-emerald-400 hover:text-emerald-300 transition flex items-center gap-1 font-bold" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp text-sm"></i>
+          <span>(32) 99929-2311</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Fixed Header Navigation with Official VRUM MOTOS Logo -->
+  <header id="main-header" class="sticky top-0 z-50 bg-[#090C10]/95 backdrop-blur-lg border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Left: VRUM MOTOS Official Logo (As specified by user image) -->
+        <a href="#" class="flex items-center gap-1 group py-1">
+          <!-- Stylized V (Black/Dark on left, Yellow on right) -->
+          <svg class="h-11 w-auto" viewBox="0 0 100 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Left leg of V (Dark Carbon) -->
+            <polygon points="12,10 38,10 50,80 32,80" fill="#263040" />
+            <!-- Right leg of V (Vibrant Yellow) -->
+            <polygon points="62,10 88,10 50,80 34,80" fill="#FFB800" />
+          </svg>
+          
+          <!-- Text: RUM (Yellow) on top, MOTOS (White) on bottom -->
+          <div class="flex flex-col -ml-1">
+            <span class="font-montserrat font-black italic text-3xl tracking-tighter text-vrum-yellow leading-none uppercase">
+              RUM
+            </span>
+            <span class="font-montserrat font-black italic text-sm tracking-widest text-white leading-none uppercase -mt-0.5">
+              MOTOS
+            </span>
+          </div>
+        </a>
+
+        <!-- Center: Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-7 text-xs font-bold tracking-wider uppercase">
+          <a href="#hero-showcase" class="text-white hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-vrum-yellow">Destaques</a>
+          <a href="#marcas" class="text-gray-300 hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-vrum-yellow after:transition-all">Marcas</a>
+          <a href="#estoque" class="text-gray-300 hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-vrum-yellow after:transition-all">Estoque de Motos</a>
+          <a href="#venda-sua-moto" class="text-gray-300 hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-vrum-yellow after:transition-all">Venda ou Troque</a>
+          <a href="#diferenciais" class="text-gray-300 hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-vrum-yellow after:transition-all">Diferenciais</a>
+          <a href="#localizacao" class="text-gray-300 hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-vrum-yellow after:transition-all">Loja em Ubá</a>
+          <a href="#faq" class="text-gray-300 hover:text-vrum-yellow transition py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-vrum-yellow after:transition-all">Dúvidas</a>
+        </nav>
+
+        <!-- Right: CTA Button -->
+        <div class="flex items-center gap-4">
+          <a href="https://wa.me/5532999292311?text=Ol%C3%A1,%20gostaria%20de%20atendimento%20na%20Vrum%20Motos%20de%20Ub%C3%A1!" target="_blank" class="hidden sm:inline-flex items-center gap-2 bg-vrum-yellow hover:bg-vrum-gold text-vrum-dark font-montserrat font-extrabold text-xs uppercase tracking-wider px-5 py-3 rounded-xl transition shadow-vrum-subtle hover:shadow-vrum-glow transform hover:-translate-y-0.5" rel="noopener noreferrer">
+            <i class="fa-brands fa-whatsapp text-base"></i>
+            <span>Chamar Consultor</span>
+          </a>
+          
+          <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-vrum-yellow p-2" aria-label="Menu">
+            <i class="fa-solid fa-bars-staggered text-2xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-[#0D1219] border-b border-gray-800 px-6 py-5">
+      <div class="flex flex-col gap-4 text-sm font-semibold">
+        <a href="#hero-showcase" class="text-vrum-yellow font-bold py-2 border-b border-gray-800/80 mobile-link">Motos em Destaque</a>
+        <a href="#marcas" class="text-gray-300 hover:text-white py-2 border-b border-gray-800/80 mobile-link">Marcas & Fabricantes</a>
+        <a href="#estoque" class="text-gray-300 hover:text-white py-2 border-b border-gray-800/80 mobile-link">Ver Todo o Estoque</a>
+        <a href="#venda-sua-moto" class="text-gray-300 hover:text-white py-2 border-b border-gray-800/80 mobile-link">Venda ou Troque sua Moto</a>
+        <a href="#diferenciais" class="text-gray-300 hover:text-white py-2 border-b border-gray-800/80 mobile-link">Por que a Vrum Motos?</a>
+        <a href="#localizacao" class="text-gray-300 hover:text-white py-2 border-b border-gray-800/80 mobile-link">Localização em Ubá - MG</a>
+        <a href="#faq" class="text-gray-300 hover:text-white py-2 mobile-link">Perguntas Frequentes</a>
+        <a href="https://wa.me/5532999292311?text=Ol%C3%A1,%20gostaria%20de%20atendimento%20na%20Vrum%20Motos%20Ub%C3%A1!" target="_blank" class="w-full text-center bg-vrum-yellow text-vrum-dark py-3.5 rounded-xl font-extrabold uppercase text-xs tracking-wider mt-2 shadow-vrum-subtle" rel="noopener noreferrer">
+          Falar com Vendedor no WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 1: HERO CINEMATOGRÁFICO COM TEXT-BEHIND-SUBJECT & ANIMAÇÕES 3D     -->
+  <!-- ========================================================================= -->
+  <section id="hero-showcase" class="relative min-h-[calc(100vh-80px)] flex flex-col justify-between overflow-hidden hero-urban-bg pt-6 pb-0 border-b border-white/5">
+    
+    <!-- Canvas de Faíscas / Embers Animadas em Tempo Real -->
+    <canvas id="hero-sparks-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[4]"></canvas>
+
+    <!-- Ambient Yellow / Smoke Lights -->
+    <div class="absolute -top-24 left-1/3 w-[600px] h-[600px] bg-vrum-yellow/15 rounded-full blur-[150px] pointer-events-none animate-pulse"></div>
+    <div class="absolute bottom-20 right-10 w-[500px] h-[500px] bg-vrum-yellow/10 rounded-full blur-[140px] pointer-events-none"></div>
+
+    <!-- Monumental Text Behind Subject (3D Parallax) -->
+    <div class="hero-giant-text" id="hero-bg-text">
+      NIGHT RIDER
+    </div>
+
+    <!-- Main Container -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 my-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- LEFT: MOTORCYCLE 3D STAGE & PREV/NEXT -->
+        <div class="lg:col-span-8 relative flex flex-col items-center justify-center min-h-[380px] sm:min-h-[480px]">
+          
+          <!-- Prev / Next Floating Arrows with Circular Progress -->
+          <button id="hero-prev-btn" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/60 hover:bg-vrum-yellow hover:text-vrum-dark text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-2xl cursor-pointer" aria-label="Moto Anterior">
+            <i class="fa-solid fa-chevron-left text-base"></i>
+          </button>
+          
+          <button id="hero-next-btn" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-30 w-12 h-12 rounded-full bg-black/60 hover:bg-vrum-yellow hover:text-vrum-dark text-white backdrop-blur-md border border-white/15 flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95 shadow-2xl cursor-pointer" aria-label="Próxima Moto">
+            <i class="fa-solid fa-chevron-right text-base"></i>
+          </button>
+
+          <!-- Bike Stage Container (3D Parallax & Headlight Flare) -->
+          <div class="bike-stage-hero" id="bike-stage-interactive">
+            
+            <!-- Dynamic Headlight Flare Beam -->
+            <div id="headlight-flare" class="headlight-flare hidden sm:block top-[28%] left-[22%]"></div>
+
+            <!-- Dynamic Images for Crossfade & 3D Tilt -->
+            <img id="hero-bike-img-primary" 
+                 src="images/cbr1000rr_clean.png" 
+                 alt="CBR 1000RR-R Fireblade" 
+                 class="bike-hero-render slide-in-active" />
+            
+            <img id="hero-bike-img-secondary" 
+                 src="" 
+                 alt="" 
+                 class="bike-hero-render opacity-0" / loading="lazy" decoding="async">
+
+            <!-- Ground Shadow -->
+            <div class="ground-shadow-hero" id="hero-ground-shadow"></div>
+          </div>
+
+          <!-- Bottom Carousel Dots & 3D Indicator -->
+          <div class="flex items-center gap-3 z-20 mt-2">
+            <span class="text-[10px] uppercase font-bold text-gray-400 hidden sm:inline"><i class="fa-solid fa-arrows-up-down-left-right text-vrum-yellow mr-1"></i> Mova o cursor para efeito 3D</span>
+            <div class="flex items-center gap-2.5" id="hero-carousel-dots">
+              <!-- Dots by JS -->
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: SPECS, TELEMETRY & BUY CTA -->
+        <div class="lg:col-span-4 flex flex-col justify-center relative z-20">
+          
+          <div id="hero-info-card" class="bg-black/60 backdrop-blur-xl border border-white/10 rounded-3xl p-6 sm:p-8 shadow-card-dark transition-all duration-300">
+            
+            <div class="flex items-center justify-between mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-extrabold uppercase tracking-wider bg-vrum-yellow/15 text-vrum-yellow border border-vrum-yellow/30" id="hero-badge">
+                <i class="fa-solid fa-bolt text-xs"></i> Super Sport
+              </span>
+              <span class="text-xs font-semibold text-gray-400" id="hero-year-km">2026 • 0 km</span>
+            </div>
+
+            <h2 id="hero-model-title" class="font-montserrat font-black text-2xl sm:text-3xl text-white tracking-tight uppercase leading-tight mb-2">
+              CBR 1000RR-R FIREBLADE
+            </h2>
+
+            <p id="hero-model-desc" class="text-gray-400 text-xs sm:text-sm leading-relaxed mb-4 font-normal">
+              Potência brutal de 217 cv com tecnologia direta da MotoGP. Pronta entrega na loja de Ubá com garantia total.
+            </p>
+
+            <!-- Animated Telemetry Specs HUD -->
+            <div class="grid grid-cols-3 gap-2 py-3 mb-4 border-y border-white/10 bg-white/5 rounded-2xl p-2.5 text-center">
+              <div class="p-1.5 rounded-xl bg-black/40 border border-white/5">
+                <span class="text-[9px] uppercase font-bold text-gray-400 block mb-0.5">Potência</span>
+                <strong id="hero-spec-power" class="font-montserrat text-xs font-black text-vrum-yellow">217 cv</strong>
+              </div>
+              <div class="p-1.5 rounded-xl bg-black/40 border border-white/5">
+                <span class="text-[9px] uppercase font-bold text-gray-400 block mb-0.5">Cilindrada</span>
+                <strong id="hero-spec-cc" class="font-montserrat text-xs font-black text-white">999 cc</strong>
+              </div>
+              <div class="p-1.5 rounded-xl bg-black/40 border border-white/5">
+                <span class="text-[9px] uppercase font-bold text-gray-400 block mb-0.5">0 a 100 km/h</span>
+                <strong id="hero-spec-accel" class="font-montserrat text-xs font-black text-emerald-400">2.9 seg</strong>
+              </div>
+            </div>
+
+            <!-- Price Box -->
+            <div class="bg-gradient-to-r from-vrum-yellow/10 via-white/5 to-white/5 rounded-2xl p-4 border border-vrum-yellow/30 mb-4">
+              <span class="text-[11px] font-bold text-gray-400 uppercase tracking-wider block">Preço à Vista</span>
+              <div class="flex items-baseline gap-2 mt-0.5">
+                <span class="text-vrum-yellow font-montserrat font-black text-3xl sm:text-4xl tracking-tight" id="hero-model-price">
+                  R$ 159.000
+                </span>
+                <span class="text-xs text-gray-400 font-semibold">à vista ou troca</span>
+              </div>
+              <div class="text-[11px] text-emerald-400 font-semibold mt-1 flex items-center gap-1">
+                <i class="fa-solid fa-circle-check"></i> Aceitamos sua moto usada com a melhor avaliação
+              </div>
+            </div>
+
+            <!-- Interactive Sound Wave Button / Ronco do Motor -->
+            <button type="button" onclick="playEngineRev()" id="btn-engine-sound" class="mb-4 w-full bg-white/5 hover:bg-vrum-yellow/20 border border-vrum-yellow/30 hover:border-vrum-yellow text-gray-200 hover:text-white px-4 py-2.5 rounded-xl transition flex items-center justify-between text-xs font-bold cursor-pointer group shadow-md">
+              <span class="flex items-center gap-2">
+                <i class="fa-solid fa-volume-high text-vrum-yellow group-hover:scale-125 transition"></i>
+                <span id="sound-btn-text">Ouvir Ronco do Motor</span>
+              </span>
+              <span class="flex items-center gap-1">
+                <span class="soundwave-bar"></span>
+                <span class="soundwave-bar"></span>
+                <span class="soundwave-bar"></span>
+                <span class="soundwave-bar"></span>
+                <span class="soundwave-bar"></span>
+              </span>
+            </button>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col gap-3">
+              <a id="hero-whatsapp-btn" href="https://wa.me/5532999292311?text=Ol%C3%A1,%20tenho%20interesse%20na%20CBR%201000RR-R%20anunciada%20na%20Vrum%20Motos!" target="_blank" class="w-full bg-vrum-yellow hover:bg-vrum-gold text-vrum-dark font-montserrat font-black text-xs uppercase tracking-wider py-4 px-6 rounded-xl transition-all shadow-vrum-subtle hover:shadow-vrum-glow flex items-center justify-center gap-2 btn-vrum-pulse cursor-pointer" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-lg"></i>
+                <span>Comprar / Negociar no WhatsApp</span>
+              </a>
+              
+              <a href="#estoque" class="w-full bg-white/5 hover:bg-white/10 text-white border border-white/15 font-montserrat font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition text-center cursor-pointer">
+                Ver Todo o Estoque de Ubá
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ======================================================== -->
+    <!-- BOTTOM SEARCH & FILTER BAR (ISUZU STYLE IN WHITE / CLEAN)-->
+    <!-- ======================================================== -->
+    <div class="w-full relative z-30 mt-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white text-gray-900 rounded-t-3xl p-5 sm:p-6 shadow-2xl border-t border-gray-100">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-center">
+            
+            <!-- Filter 1: Sort By -->
+            <div>
+              <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Ordenar Por:</label>
+              <select id="filter-sort" class="w-full bg-gray-50 border border-gray-200 text-gray-800 text-xs font-bold rounded-xl p-3 focus:outline-none focus:border-vrum-yellow">
+                <option value="relevance">Mais Populares</option>
+                <option value="price-asc">Menor Preço</option>
+                <option value="price-desc">Maior Preço</option>
+                <option value="year-desc">Mais Novas (Ano)</option>
+              </select>
+            </div>
+
+            <!-- Filter 2: Brand -->
+            <div>
+              <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Marca:</label>
+              <select id="filter-brand" class="w-full bg-gray-50 border border-gray-200 text-gray-800 text-xs font-bold rounded-xl p-3 focus:outline-none focus:border-vrum-yellow">
+                <option value="all">Todas as Marcas (25 motos)</option>
+                <option value="Honda">Honda (5 motos)</option>
+                <option value="Yamaha">Yamaha (5 motos)</option>
+                <option value="BMW">BMW Motorrad (5 motos)</option>
+                <option value="Kawasaki">Kawasaki (5 motos)</option>
+                <option value="Triumph">Triumph (5 motos)</option>
+              </select>
+            </div>
+
+            <!-- Filter 3: Category -->
+            <div>
+              <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Categoria:</label>
+              <select id="filter-category" class="w-full bg-gray-50 border border-gray-200 text-gray-800 text-xs font-bold rounded-xl p-3 focus:outline-none focus:border-vrum-yellow">
+                <option value="all">Todas as Categorias</option>
+                <option value="Street">Street / Urbanas</option>
+                <option value="Naked">Naked Esportivas</option>
+                <option value="Trail">Trail / Aventura</option>
+                <option value="Scooter">Scooters</option>
+                <option value="Sport">Super Esportivas</option>
+                <option value="Classic">Clássicas / Custom</option>
+              </select>
+            </div>
+
+            <!-- Filter 4: Search keyword -->
+            <div>
+              <label class="block text-[10px] font-bold text-gray-400 uppercase tracking-wider mb-1">Buscar Modelo:</label>
+              <div class="relative">
+                <input type="text" id="filter-search" placeholder="Ex: Titan, MT-09, GS 1250, Ninja, Tiger..." class="w-full bg-gray-50 border border-gray-200 text-gray-800 text-xs font-semibold rounded-xl p-3 pl-9 focus:outline-none focus:border-vrum-yellow" />
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-3.5 text-gray-400 text-xs"></i>
+              </div>
+            </div>
+
+            <!-- Filter 5: CTA Filter Button -->
+            <div class="flex items-end">
+              <a href="#estoque" onclick="applyStockFilters()" class="w-full bg-vrum-dark hover:bg-black text-vrum-yellow font-montserrat font-black text-xs uppercase tracking-wider py-3.5 px-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
+                <i class="fa-solid fa-filter text-xs"></i>
+                <span>Ver Estoque</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- NOVA SECTION: MARCAS & FABRICANTES OFICIAIS (5 MOTOS POR MARCA)            -->
+  <!-- ========================================================================= -->
+  <section id="marcas" class="py-16 bg-[#080B0F] relative border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+        <span class="text-vrum-yellow font-bold text-xs uppercase tracking-widest bg-vrum-yellow/10 border border-vrum-yellow/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Fabricantes de Renome Mundial
+        </span>
+        <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white tracking-tight uppercase">
+          Escolha por Marca / Fabricante
+        </h2>
+        <p class="text-gray-400 text-sm mt-2">
+          Clique no logotipo da montadora para filtrar instantaneamente os <strong>5 modelos selecionados</strong> disponíveis em nosso estoque em Ubá.
+        </p>
+      </div>
+
+      <!-- Brands Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        
+        <!-- BRAND 1: HONDA -->
+        <div onclick="filterByBrand('Honda')" class="brand-card group bg-[#111622] hover:bg-[#161D2C] border border-white/10 hover:border-red-500/60 rounded-3xl p-6 flex flex-col items-center justify-between text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(239,68,68,0.2)] cursor-pointer reveal">
+          <div class="card-lift w-16 h-16 rounded-2xl bg-red-950/40 border border-red-500/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-inner">
+            <!-- Honda Wing Stylized Logo -->
+            <svg class="w-10 h-10 text-red-500" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M10 50 C30 25, 70 20, 90 25 C75 35, 60 42, 45 46 C60 48, 75 52, 85 58 C65 62, 45 65, 30 75 C45 72, 60 72, 70 75 C45 85, 25 80, 10 50 Z" />
+              <path d="M35 55 C50 52, 65 52, 75 56 C58 60, 42 62, 30 68 Z" opacity="0.8" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Japão 🇯🇵</span>
+            <h3 class="font-montserrat font-black text-lg text-white group-hover:text-red-400 transition-colors">HONDA</h3>
+            <p class="text-[11px] text-gray-400 mt-1">CBR, CB 650R, Sahara...</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 w-full flex items-center justify-between">
+            <span class="bg-red-500/15 text-red-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-red-500/30">5 Motos</span>
+            <span class="text-xs text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- BRAND 2: YAMAHA -->
+        <div onclick="filterByBrand('Yamaha')" class="brand-card group bg-[#111622] hover:bg-[#161D2C] border border-white/10 hover:border-blue-500/60 rounded-3xl p-6 flex flex-col items-center justify-between text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(59,130,246,0.2)] cursor-pointer reveal">
+          <div class="card-lift w-16 h-16 rounded-2xl bg-blue-950/40 border border-blue-500/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-inner">
+            <!-- Yamaha 3 Tuning Forks Logo -->
+            <svg class="w-10 h-10 text-blue-500" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+              <circle cx="50" cy="50" r="42" stroke-width="5" />
+              <!-- Top Fork -->
+              <line x1="50" y1="50" x2="50" y2="18" stroke-width="7" />
+              <line x1="42" y1="26" x2="50" y2="18" stroke-width="5" />
+              <line x1="58" y1="26" x2="50" y2="18" stroke-width="5" />
+              <!-- Bottom Left Fork -->
+              <line x1="50" y1="50" x2="22" y2="68" stroke-width="7" />
+              <line x1="28" y1="58" x2="22" y2="68" stroke-width="5" />
+              <line x1="34" y1="74" x2="22" y2="68" stroke-width="5" />
+              <!-- Bottom Right Fork -->
+              <line x1="50" y1="50" x2="78" y2="68" stroke-width="7" />
+              <line x1="72" y1="58" x2="78" y2="68" stroke-width="5" />
+              <line x1="66" y1="74" x2="78" y2="68" stroke-width="5" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Japão 🇯🇵</span>
+            <h3 class="font-montserrat font-black text-lg text-white group-hover:text-blue-400 transition-colors">YAMAHA</h3>
+            <p class="text-[11px] text-gray-400 mt-1">MT-09, MT-03, Lander...</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 w-full flex items-center justify-between">
+            <span class="bg-blue-500/15 text-blue-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-blue-500/30">5 Motos</span>
+            <span class="text-xs text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- BRAND 3: BMW MOTORRAD -->
+        <div onclick="filterByBrand('BMW')" class="brand-card group bg-[#111622] hover:bg-[#161D2C] border border-white/10 hover:border-cyan-400/60 rounded-3xl p-6 flex flex-col items-center justify-between text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(34,211,238,0.2)] cursor-pointer reveal">
+          <div class="card-lift w-16 h-16 rounded-2xl bg-cyan-950/40 border border-cyan-400/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-inner">
+            <!-- BMW Roundel Logo -->
+            <svg class="w-10 h-10" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="44" fill="#1A202C" stroke="#E2E8F0" stroke-width="4" />
+              <!-- Top Left & Bottom Right (Blue) -->
+              <path d="M50 16 A34 34 0 0 0 16 50 L50 50 Z" fill="#0066B1" />
+              <path d="M50 84 A34 34 0 0 0 84 50 L50 50 Z" fill="#0066B1" />
+              <!-- Top Right & Bottom Left (White) -->
+              <path d="M50 16 A34 34 0 0 1 84 50 L50 50 Z" fill="#FFFFFF" />
+              <path d="M50 84 A34 34 0 0 1 16 50 L50 50 Z" fill="#FFFFFF" />
+              <circle cx="50" cy="50" r="34" fill="none" stroke="#E2E8F0" stroke-width="2" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Alemanha 🇩🇪</span>
+            <h3 class="font-montserrat font-black text-lg text-white group-hover:text-cyan-300 transition-colors">BMW MOTORRAD</h3>
+            <p class="text-[11px] text-gray-400 mt-1">S1000RR, GS 1250, F850...</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 w-full flex items-center justify-between">
+            <span class="bg-cyan-500/15 text-cyan-300 text-[10px] font-bold px-2 py-0.5 rounded-full border border-cyan-500/30">5 Motos</span>
+            <span class="text-xs text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- BRAND 4: KAWASAKI -->
+        <div onclick="filterByBrand('Kawasaki')" class="brand-card group bg-[#111622] hover:bg-[#161D2C] border border-white/10 hover:border-lime-500/60 rounded-3xl p-6 flex flex-col items-center justify-between text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(132,204,22,0.2)] cursor-pointer reveal">
+          <div class="card-lift w-16 h-16 rounded-2xl bg-lime-950/40 border border-lime-500/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-inner">
+            <!-- Kawasaki Ninja K / Rivermark Logo -->
+            <svg class="w-10 h-10 text-lime-400" viewBox="0 0 100 100" fill="currentColor">
+              <path d="M22 18 L34 18 L34 82 L22 82 Z" />
+              <path d="M34 52 L68 18 L82 18 L48 52 Z" />
+              <path d="M44 48 L80 82 L66 82 L34 50 Z" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Japão 🇯🇵</span>
+            <h3 class="font-montserrat font-black text-lg text-white group-hover:text-lime-400 transition-colors">KAWASAKI</h3>
+            <p class="text-[11px] text-gray-400 mt-1">Ninja ZX-10R, Z900, Versys...</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 w-full flex items-center justify-between">
+            <span class="bg-lime-500/15 text-lime-400 text-[10px] font-bold px-2 py-0.5 rounded-full border border-lime-500/30">5 Motos</span>
+            <span class="text-xs text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+        <!-- BRAND 5: TRIUMPH -->
+        <div onclick="filterByBrand('Triumph')" class="brand-card group bg-[#111622] hover:bg-[#161D2C] border border-white/10 hover:border-vrum-yellow/60 rounded-3xl p-6 flex flex-col items-center justify-between text-center transition-all duration-300 transform hover:-translate-y-2 hover:shadow-[0_15px_35px_rgba(255,184,0,0.2)] cursor-pointer reveal">
+          <div class="card-lift w-16 h-16 rounded-2xl bg-amber-950/40 border border-vrum-yellow/30 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform shadow-inner">
+            <!-- Triumph British Triangle Crest -->
+            <svg class="w-10 h-10 text-vrum-yellow" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="5">
+              <polygon points="50,15 88,80 12,80" stroke-linejoin="round" />
+              <path d="M30 60 Q50 40 70 60" stroke-width="4" />
+              <line x1="50" y1="15" x2="50" y2="80" stroke-width="3" stroke-dasharray="4,4" />
+              <circle cx="50" cy="50" r="8" fill="currentColor" />
+            </svg>
+          </div>
+          <div>
+            <span class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-0.5">Inglaterra 🇬🇧</span>
+            <h3 class="font-montserrat font-black text-lg text-white group-hover:text-vrum-yellow transition-colors">TRIUMPH</h3>
+            <p class="text-[11px] text-gray-400 mt-1">Tiger 900, Speed 400, Rocket...</p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-white/5 w-full flex items-center justify-between">
+            <span class="bg-vrum-yellow/15 text-vrum-yellow text-[10px] font-bold px-2 py-0.5 rounded-full border border-vrum-yellow/30">5 Motos</span>
+            <span class="text-xs text-gray-400 group-hover:text-white group-hover:translate-x-1 transition-all"><i class="fa-solid fa-arrow-right"></i></span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 2: ESTOQUE DE MOTOS EM UBÁ - MG (CATÁLOGO INTERATIVO)             -->
+  <!-- ========================================================================= -->
+  <section id="estoque" class="py-20 bg-[#0B0F15] relative border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6 reveal">
+        <div>
+          <span class="text-vrum-yellow font-bold text-xs uppercase tracking-widest bg-vrum-yellow/10 border border-vrum-yellow/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            Estoque a Pronta Entrega em Ubá
+          </span>
+          <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white tracking-tight uppercase">
+            Motos Selecionadas com Garantia
+          </h2>
+          <p class="text-gray-400 text-sm mt-2">
+            Veículos 100% periciados, revisados e prontos para rodar. Aceitamos sua moto usada e financiamos em até 48x.
+          </p>
+        </div>
+
+        <!-- Filter category pill buttons -->
+        <div class="flex flex-wrap gap-2" id="category-pills">
+          <button onclick="filterCategoryPill('all')" class="cat-pill active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-vrum-yellow text-vrum-dark shadow-glow-yellow-sm">Todas</button>
+          <button onclick="filterCategoryPill('Street')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300">Street</button>
+          <button onclick="filterCategoryPill('Naked')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300">Naked</button>
+          <button onclick="filterCategoryPill('Trail')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300">Trail</button>
+          <button onclick="filterCategoryPill('Scooter')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300">Scooter</button>
+          <button onclick="filterCategoryPill('Sport')" class="cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300">Esportivas</button>
+        </div>
+      </div>
+
+      <!-- Stock Grid Container (Injected via JS) -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="stock-grid">
+        <!-- Bikes rendered by JS -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 3: VENDA OU TROQUE SUA MOTO (AVALIAÇÃO RÁPIDA)                   -->
+  <!-- ========================================================================= -->
+  <section id="venda-sua-moto" class="py-20 bg-[#090C10] relative border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left: Text & Benefits -->
+        <div class="lg:col-span-6 reveal">
+          <span class="text-vrum-yellow font-bold text-xs uppercase tracking-widest bg-vrum-yellow/10 border border-vrum-yellow/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+            Avaliação Justa & Dinheiro Rápido
+          </span>
+          <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white tracking-tight uppercase leading-tight">
+            Quer Vender ou Trocar sua Moto em Ubá?
+          </h2>
+          <p class="text-gray-400 text-sm sm:text-base mt-4 leading-relaxed">
+            Na <strong>Vrum Motos</strong> você tem a melhor avaliação da sua moto seminova na Zona da Mata. Pagamento à vista no Pix ou abatimento imediato na troca por outra moto do nosso estoque!
+          </p>
+
+          <div class="space-y-4 mt-8">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-vrum-yellow/20 text-vrum-yellow flex items-center justify-center shrink-0 text-lg">
+                <i class="fa-solid fa-money-bill-wave"></i>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-white text-base">Pagamento Instantâneo no Pix</h4>
+                <p class="text-gray-400 text-xs">Aprovou a proposta? O dinheiro cai na sua conta na hora, sem enrolação.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-vrum-yellow/20 text-vrum-yellow flex items-center justify-center shrink-0 text-lg">
+                <i class="fa-solid fa-handshake-simple"></i>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-white text-base">Troca com Troco</h4>
+                <p class="text-gray-400 text-xs">Pegue uma moto mais econômica e saia com dinheiro no bolso.</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-vrum-yellow/20 text-vrum-yellow flex items-center justify-center shrink-0 text-lg">
+                <i class="fa-solid fa-file-shield"></i>
+              </div>
+              <div>
+                <h4 class="font-montserrat font-bold text-white text-base">Transferência e Documentação Simples</h4>
+                <p class="text-gray-400 text-xs">Cuidamos de toda a parte burocrática de cartório e despachante para você.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Fast Evaluation Form -->
+        <div class="card-lift lg:col-span-6 bg-[#121722] rounded-3xl p-8 border border-white/10 shadow-2xl reveal">
+          <h3 class="font-montserrat font-black text-2xl text-white uppercase mb-2">
+            Simular Avaliação da Minha Moto
+          </h3>
+          <p class="text-gray-400 text-xs mb-6">Preencha os dados e nosso avaliador enviará uma proposta no seu WhatsApp em minutos.</p>
+
+          <form id="evaluation-form" onsubmit="sendEvaluationForm(event)" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Marca / Modelo da Moto:</label>
+                <input type="text" id="eval-model" required placeholder="Ex: Honda Titan 160" class="w-full bg-[#0B0F15] border border-gray-700 text-white text-xs rounded-xl p-3.5 focus:border-vrum-yellow focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Ano de Fabricação:</label>
+                <input type="text" id="eval-year" required placeholder="Ex: 2022" class="w-full bg-[#0B0F15] border border-gray-700 text-white text-xs rounded-xl p-3.5 focus:border-vrum-yellow focus:outline-none" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Quilometragem (Km):</label>
+                <input type="text" id="eval-km" required placeholder="Ex: 18.500 km" class="w-full bg-[#0B0F15] border border-gray-700 text-white text-xs rounded-xl p-3.5 focus:border-vrum-yellow focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Objetivo:</label>
+                <select id="eval-goal" class="w-full bg-[#0B0F15] border border-gray-700 text-white text-xs rounded-xl p-3.5 focus:border-vrum-yellow focus:outline-none">
+                  <option value="troca">Quero dar na Troca por outra moto</option>
+                  <option value="venda">Quero apenas Vender à Vista</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Seu Nome:</label>
+                <input type="text" id="eval-name" required placeholder="Seu nome completo" class="w-full bg-[#0B0F15] border border-gray-700 text-white text-xs rounded-xl p-3.5 focus:border-vrum-yellow focus:outline-none" />
+              </div>
+              <div>
+                <label class="block text-[11px] font-bold text-gray-300 uppercase mb-1">Seu WhatsApp com DDD:</label>
+                <input type="tel" id="eval-phone" required placeholder="(32) 99929-2311" class="w-full bg-[#0B0F15] border border-gray-700 text-white text-xs rounded-xl p-3.5 focus:border-vrum-yellow focus:outline-none" />
+              </div>
+            </div>
+
+            <button type="submit" class="w-full bg-vrum-yellow hover:bg-vrum-gold text-vrum-dark font-montserrat font-black text-xs uppercase tracking-wider py-4 rounded-xl transition shadow-vrum-subtle hover:shadow-vrum-glow flex items-center justify-center gap-2 mt-4">
+              <i class="fa-brands fa-whatsapp text-lg"></i>
+              <span>Enviar para Avaliação Gratuita</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 4: POR QUE COMPRAR NA VRUM MOTOS UBÁÁ? (DIFERENCIAIS)              -->
+  <!-- ========================================================================= -->
+  <section id="diferenciais" class="py-20 bg-[#0B0F15] relative border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+        <span class="text-vrum-yellow font-bold text-xs uppercase tracking-widest bg-vrum-yellow/10 border border-vrum-yellow/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Segurança & Confiança
+        </span>
+        <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white tracking-tight uppercase">
+          Por Que a Vrum Motos é Referência em Ubá?
+        </h2>
+        <p class="text-gray-400 text-sm mt-2">
+          Compre sua moto sem dor de cabeça com quem entende de duas rodas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="bg-[#121722] rounded-3xl p-7 border border-white/10 hover:border-vrum-yellow/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-vrum-yellow/15 text-vrum-yellow font-black text-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+          <h3 class="font-montserrat font-bold text-lg text-white mb-2">Laudo Cautelar 100%</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Sem sinistro, sem leilão e sem surpresas. Histórico veicular totalmente checado e aprovado.
+          </p>
+        </div>
+
+        <div class="bg-[#121722] rounded-3xl p-7 border border-white/10 hover:border-vrum-yellow/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-vrum-yellow/15 text-vrum-yellow font-black text-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-wrench"></i>
+          </div>
+          <h3 class="font-montserrat font-bold text-lg text-white mb-2">Garantia de Loja</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Motos revisadas em mais de 40 itens com garantia completa de 3 meses para motor e câmbio.
+          </p>
+        </div>
+
+        <div class="bg-[#121722] rounded-3xl p-7 border border-white/10 hover:border-vrum-yellow/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-vrum-yellow/15 text-vrum-yellow font-black text-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-credit-card"></i>
+          </div>
+          <h3 class="font-montserrat font-bold text-lg text-white mb-2">Até 21x no Cartão</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Facilidade no pagamento: parcele no cartão de crédito em até 21x ou financie com bancos parceiros.
+          </p>
+        </div>
+
+        <div class="bg-[#121722] rounded-3xl p-7 border border-white/10 hover:border-vrum-yellow/40 transition-all duration-300 group">
+          <div class="w-14 h-14 rounded-2xl bg-vrum-yellow/15 text-vrum-yellow font-black text-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-truck-fast"></i>
+          </div>
+          <h3 class="font-montserrat font-bold text-lg text-white mb-2">Entrega na Região</h3>
+          <p class="text-gray-400 text-xs leading-relaxed">
+            Entregamos sua moto com rapidez e segurança em Ubá, Viçosa, Juiz de Fora, Cataguases e Muriaé.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 5: LOCALIZAÇÃO DA LOJA FÍSICA EM UBÁÁ - MG                         -->
+  <!-- ========================================================================= -->
+  
+  <!-- ========================================================================= -->
+  <!-- SEÇÃO COMPARATIVA: ORIGINKIT MATRIX (POR QUE NOS ESCOLHER)                -->
+  <!-- ========================================================================= -->
+  <section id="comparativo-originkit" class="py-20 bg-[#060913] text-white border-t border-slate-800/80 relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-bold uppercase tracking-wider mb-4">
+          <i class="fa-solid fa-shield-check"></i> Transparência & Rigor Técnico
+        </span>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight">
+          Por Que Escolher a Vrum Motos?
+        </h2>
+        <p class="text-slate-400 text-xs sm:text-sm mt-3 leading-relaxed">
+          As melhores motos multimarcas zero km e seminovas com entrega rápida.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        
+        <!-- Opções Comuns do Mercado -->
+        <div class="p-8 rounded-3xl bg-slate-900/60 border border-slate-800 shadow-lg flex flex-col justify-between">
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-2xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center font-bold text-lg">
+                ✕
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-slate-300">Lojas Convencionais</h3>
+                <span class="text-[11px] text-slate-500 font-medium">Práticas comuns que geram dor de cabeça</span>
+              </div>
+            </div>
+            <ul class="space-y-4 text-slate-400 text-xs sm:text-sm leading-relaxed">
+            <li class="flex items-start gap-3"><span class="text-rose-500 font-bold">✕</span> <span>Poucas opções de modelos em estoque para escolha</span></li>
+            <li class="flex items-start gap-3"><span class="text-rose-500 font-bold">✕</span> <span>Demora de semanas para liberação de crédito bancário</span></li>
+            <li class="flex items-start gap-3"><span class="text-rose-500 font-bold">✕</span> <span>Veículos entregues sem revisão de segurança</span></li>
+            <li class="flex items-start gap-3"><span class="text-rose-500 font-bold">✕</span> <span>Sem suporte pós-venda após a assinatura do contrato</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-800/80 text-[11px] text-slate-500 flex items-center gap-2">
+            <i class="fa-solid fa-triangle-exclamation text-amber-500"></i> Risco de prejuízos e retrabalho para o cliente.
+          </div>
+        </div>
+
+        <!-- Nosso Padrão de Excelência -->
+        <div class="p-8 rounded-3xl bg-gradient-to-b from-slate-900 via-[#0D1527] to-slate-900 border-2 border-emerald-500/60 shadow-2xl relative flex flex-col justify-between ring-4 ring-emerald-500/10">
+          <div class="absolute -top-3.5 right-6 bg-gradient-to-r from-emerald-500 to-teal-500 text-slate-950 font-black text-[10px] uppercase tracking-wider px-3.5 py-1 rounded-full shadow-lg">
+            Pronta Entrega
+          </div>
+          <div>
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center font-bold text-lg shadow-sm">
+                ✓
+              </div>
+              <div>
+                <h3 class="text-lg font-black text-white">Vrum Motos Concessionária</h3>
+                <span class="text-[11px] text-emerald-400 font-semibold">Compromisso formal com o seu resultado</span>
+              </div>
+            </div>
+            <ul class="space-y-4 text-xs sm:text-sm leading-relaxed">
+            <li class="flex items-start gap-3 text-emerald-400 font-medium"><span class="font-black text-emerald-400">✓</span> <span>Amplo estoque de motos Honda, Yamaha e outras marcas com procedência</span></li>
+            <li class="flex items-start gap-3 text-emerald-400 font-medium"><span class="font-black text-emerald-400">✓</span> <span>Aprovação de financiamento em minutos pelo WhatsApp com taxas competitivas</span></li>
+            <li class="flex items-start gap-3 text-emerald-400 font-medium"><span class="font-black text-emerald-400">✓</span> <span>Motos revisadas e higienizadas prontas para rodar no mesmo dia</span></li>
+            <li class="flex items-start gap-3 text-emerald-400 font-medium"><span class="font-black text-emerald-400">✓</span> <span>Equipe de consultores apaixonados por duas rodas prontos para orientar sua escolha</span></li>
+            </ul>
+          </div>
+          <div class="mt-8 pt-4 border-t border-slate-800 flex items-center justify-between text-xs">
+            <span class="text-emerald-400 font-bold flex items-center gap-1.5">
+              <i class="fa-solid fa-circle-check"></i> Garantia Contratual
+            </span>
+            <a href="https://wa.me/5532999292311?text=Olá!%20Gostaria%20de%20consultar%20as%20motos%20disponíveis%20na%20Vrum%20Motos." target="_blank" class="text-white hover:text-emerald-400 font-bold transition flex items-center gap-1">
+              <span>Saber Mais</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section id="localizacao" class="py-20 bg-[#090C10] relative border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="card-lift bg-gradient-to-br from-[#141B26] via-[#10151E] to-[#0A0D12] rounded-3xl p-8 sm:p-12 border border-white/10 shadow-2xl">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-6 reveal">
+            <span class="text-vrum-yellow font-bold text-xs uppercase tracking-widest bg-vrum-yellow/10 border border-vrum-yellow/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+              Venha Conhecer Nosso Showroom
+            </span>
+            <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white tracking-tight uppercase leading-tight">
+              Visite a Vrum Motos em Ubá - MG
+            </h2>
+            <p class="text-gray-400 text-sm mt-3 leading-relaxed">
+              Tome um café com a nossa equipe, faça um test-ride e saia pilotando sua nova moto no mesmo dia!
+            </p>
+
+            <div class="space-y-4 mt-6 text-sm text-gray-300">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-location-dot text-vrum-yellow text-lg w-6"></i>
+                <span>Av. Padre Arnaldo Jansen, 850 - Ubá, Minas Gerais</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-phone text-vrum-yellow text-lg w-6"></i>
+                <span>Telefone & WhatsApp: (32) 99929-2311</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-calendar-days text-vrum-yellow text-lg w-6"></i>
+                <span>Segunda a Sexta: 08:00 às 18:00 | Sábado: 08:00 às 12:00</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 mt-8">
+              <a href="https://www.google.com/maps/search/?api=1&query=Av.+Padre+Arnaldo+Jansen,+850,+Ub%C3%A1+-+MG" target="_blank" class="bg-white/10 hover:bg-white/20 text-white font-montserrat font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2 border border-white/15" rel="noopener noreferrer">
+                <i class="fa-solid fa-diamond-turn-right text-vrum-yellow"></i>
+                <span>Abrir Rota no GPS / Google Maps</span>
+              </a>
+              <a href="https://wa.me/5532999292311?text=Ol%C3%A1,%20estou%20indo%20na%20loja%20da%20Vrum%20Motos%20em%20Ub%C3%A1!" target="_blank" class="bg-vrum-yellow hover:bg-vrum-gold text-vrum-dark font-montserrat font-bold text-xs uppercase tracking-wider py-3.5 px-6 rounded-xl transition flex items-center justify-center gap-2" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-base"></i>
+                <span>Avisar Chegada</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Visual Map Showcase -->
+          <div class="card-lift lg:col-span-6 rounded-2xl overflow-hidden border border-white/15 relative h-80 sm:h-96 bg-[#0D1219] shadow-2xl group">
+            
+            <!-- Real Working Google Maps Embed for Ubá - MG -->
+            <iframe 
+              src="https://maps.google.com/maps?q=Av.+Padre+Arnaldo+Jansen,+850,+Ub%C3%A1+-+MG&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+              class="w-full h-full border-0 filter grayscale-[30%] contrast-[1.05] opacity-95 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-500" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização Vrum Motos Ubá">
+            </iframe>
+
+            <!-- Floating Showroom Location Badge -->
+            <div class="absolute bottom-4 left-4 right-4 sm:right-auto bg-[#090C10]/90 backdrop-blur-md border border-vrum-yellow/40 rounded-2xl p-3.5 shadow-2xl flex items-center justify-between gap-4 pointer-events-auto">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-vrum-yellow text-vrum-dark flex items-center justify-center font-bold text-base shadow-glow-yellow-sm shrink-0">
+                  <i class="fa-solid fa-motorcycle"></i>
+                </div>
+                <div>
+                  <h4 class="font-montserrat font-black text-xs text-white uppercase tracking-tight">Vrum Motos Ubá</h4>
+                  <p class="text-[10px] text-gray-400">Av. Padre Arnaldo Jansen, 850</p>
+                </div>
+              </div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Av.+Padre+Arnaldo+Jansen,+850,+Ub%C3%A1+-+MG" target="_blank" class="bg-vrum-yellow hover:bg-vrum-gold text-vrum-dark text-[10px] font-extrabold uppercase px-3 py-2 rounded-lg transition shrink-0 shadow-sm flex items-center gap-1.5" rel="noopener noreferrer">
+                <i class="fa-solid fa-location-arrow"></i>
+                <span>Abrir GPS</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- SECTION 6: FAQ (PERGUNTAS FREQUENTES)                                     -->
+  <!-- ========================================================================= -->
+  <section id="faq" class="py-20 bg-[#0B0F15] border-b border-white/5">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-14 reveal">
+        <span class="text-vrum-yellow font-bold text-xs uppercase tracking-widest bg-vrum-yellow/10 border border-vrum-yellow/20 px-3.5 py-1.5 rounded-full inline-block mb-3">
+          Tire Suas Dúvidas
+        </span>
+        <h2 class="font-montserrat font-black text-3xl sm:text-4xl text-white tracking-tight uppercase">
+          Perguntas Frequentes
+        </h2>
+      </div>
+
+      <div class="space-y-3.5" id="faq-accordion">
+        
+        <div class="border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#121722] faq-item">
+          <button class="w-full text-left p-5 font-montserrat font-bold text-sm sm:text-base text-white flex items-center justify-between gap-4 faq-toggle">
+            <span>Vocês aceitam minha moto usada como entrada na troca?</span>
+            <i class="fa-solid fa-chevron-down text-vrum-yellow transition-transform duration-300"></i>
+          </button>
+          <div class="p-5 pt-0 text-xs sm:text-sm text-gray-400 leading-relaxed hidden faq-content">
+            Sim! Avaliamos sua moto usada na hora em nossa loja física em Ubá ou pelo WhatsApp. O valor é abatido diretamente no preço da moto escolhida.
+          </div>
+        </div>
+
+        <div class="border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#121722] faq-item">
+          <button class="w-full text-left p-5 font-montserrat font-bold text-sm sm:text-base text-white flex items-center justify-between gap-4 faq-toggle">
+            <span>Quais são as formas de pagamento disponíveis?</span>
+            <i class="fa-solid fa-chevron-down text-vrum-yellow transition-transform duration-300"></i>
+          </button>
+          <div class="p-5 pt-0 text-xs sm:text-sm text-gray-400 leading-relaxed hidden faq-content">
+            Aceitamos pagamento à vista (Pix/Ted), parcelamento no cartão de crédito em até 21x e financiamento bancário em até 48x pelos principais bancos (Santander, BV, Pan, Itaú).
+          </div>
+        </div>
+
+        <div class="border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#121722] faq-item">
+          <button class="w-full text-left p-5 font-montserrat font-bold text-sm sm:text-base text-white flex items-center justify-between gap-4 faq-toggle">
+            <span>As motos têm garantia?</span>
+            <i class="fa-solid fa-chevron-down text-vrum-yellow transition-transform duration-300"></i>
+          </button>
+          <div class="p-5 pt-0 text-xs sm:text-sm text-gray-400 leading-relaxed hidden faq-content">
+            Sim! Todas as motos seminovas acompanham garantia legal de 90 dias (3 meses) para motor e câmbio, além de laudo cautelar 100% aprovado. As motos 0km contam com a garantia oficial de fábrica da montadora.
+          </div>
+        </div>
+
+        <div class="border border-white/10 rounded-2xl overflow-hidden transition-all bg-[#121722] faq-item">
+          <button class="w-full text-left p-5 font-montserrat font-bold text-sm sm:text-base text-white flex items-center justify-between gap-4 faq-toggle">
+            <span>Vocês entregam a moto em outras cidades da região de Ubá?</span>
+            <i class="fa-solid fa-chevron-down text-vrum-yellow transition-transform duration-300"></i>
+          </button>
+          <div class="p-5 pt-0 text-xs sm:text-sm text-gray-400 leading-relaxed hidden faq-content">
+            Sim! Realizamos entregas em toda a Zona da Mata mineira (Viçosa, Juiz de Fora, Cataguases, Muriaé, Visconde do Rio Branco, Ervália, Guidoval, etc.) com transporte seguro e documentação organizada.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- FOOTER                                                                    -->
+  <!-- ========================================================================= -->
+  <footer class="bg-[#06080B] text-white pt-16 pb-12 relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Upper Banner -->
+      <div class="bg-gradient-to-r from-vrum-yellow via-amber-500 to-yellow-600 rounded-3xl p-8 sm:p-12 mb-16 text-center text-vrum-dark shadow-vrum-glow reveal">
+        <h2 class="font-montserrat font-black text-2xl sm:text-4xl mb-3 uppercase">
+          Encontre Sua Próxima Moto na Vrum Motos!
+        </h2>
+        <p class="text-vrum-dark/80 text-xs sm:text-sm max-w-2xl mx-auto mb-8 font-semibold">
+          Fale agora com nosso time de especialistas em Ubá - MG e garanta a melhor negociação da região.
+        </p>
+        <a href="https://wa.me/5532999292311?text=Ol%C3%A1,%20gostaria%20de%20ver%20as%20motos%20dispon%C3%ADveis%20na%20Vrum%20Motos!" target="_blank" class="inline-flex items-center gap-3 bg-vrum-dark text-vrum-yellow hover:bg-black font-montserrat font-black text-sm uppercase tracking-wider py-4 px-8 rounded-full transition shadow-2xl transform hover:scale-105" rel="noopener noreferrer">
+          <i class="fa-brands fa-whatsapp text-emerald-400 text-xl"></i>
+          <span>Falar com Consultor no WhatsApp</span>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-gray-800 text-xs text-gray-400">
+        <div class="md:col-span-2">
+          <!-- Logo -->
+          <div class="flex items-center gap-1 mb-4">
+            <svg class="h-9 w-auto" viewBox="0 0 100 90" fill="none">
+              <polygon points="12,10 38,10 50,80 32,80" fill="#263040" />
+              <polygon points="62,10 88,10 50,80 34,80" fill="#FFB800" />
+            </svg>
+            <div class="flex flex-col -ml-1">
+              <span class="font-montserrat font-black italic text-2xl text-vrum-yellow leading-none">RUM</span>
+              <span class="font-montserrat font-black italic text-xs text-white leading-none tracking-widest">MOTOS</span>
+            </div>
+          </div>
+          <p class="text-gray-400 text-xs leading-relaxed max-w-sm">
+            Vrum Motos • Compra, Venda e Troca de Motocicletas em Ubá e Região. Veículos com procedência, garantia e a melhor avaliação do seu seminovo.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-wider mb-3">Estoque Rápido</h4>
+          <ul class="space-y-2">
+            <li><a href="#estoque" class="hover:text-vrum-yellow transition">Motos Street (CG 160)</a></li>
+            <li><a href="#estoque" class="hover:text-vrum-yellow transition">Naked (CB 300F / CB 650R)</a></li>
+            <li><a href="#estoque" class="hover:text-vrum-yellow transition">Trail (Sahara 300)</a></li>
+            <li><a href="#estoque" class="hover:text-vrum-yellow transition">Scooters (PCX 160)</a></li>
+            <li><a href="#estoque" class="hover:text-vrum-yellow transition">Super Esportivas (CBR 1000RR)</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-white font-bold uppercase tracking-wider mb-3">Atendimento Ubá</h4>
+          <ul class="space-y-2">
+            <li><span class="text-gray-300">Av. Padre Arnaldo Jansen, 850</span></li>
+            <li><span class="text-gray-300">Ubá - MG</span></li>
+            <li><a href="https://wa.me/5532999292311" class="text-vrum-yellow hover:underline">(32) 99929-2311</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-gray-500">
+        <div>
+          © 2026 Vrum Motos Ubá - MG. Todos os direitos reservados.
+        </div>
+        <div class="text-gray-400 font-semibold">
+          Liberdade em Duas Rodas
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (PULSING) -->
+  <aside class="fixed bottom-6 right-6 z-50 flex items-center gap-3">
+    <div class="hidden sm:flex bg-[#121722] px-3.5 py-2 rounded-2xl shadow-xl border border-gray-800 items-center gap-2 text-xs font-semibold text-gray-200 animate-bounce">
+      <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+      <span>Fale com a Vrum Motos Ubá!</span>
+    </div>
+    
+    <a href="https://wa.me/5532999292311?text=Ol%C3%A1,%20gostaria%20de%20atendimento%20na%20Vrum%20Motos%20em%20Ub%C3%A1!" target="_blank" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white flex items-center justify-center text-3xl shadow-2xl transition-all transform hover:scale-110 active:scale-95 btn-vrum-pulse" title="WhatsApp Vrum Motos" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT: STOCK DATABASE, FILTERING & SMOOTH HERO TRANSITIONS           -->
+  <!-- ========================================================================= -->
+  <script>
+    // VRUM MOTOS STOCK DATABASE (UBÁ - MG) - 5 MOTOS POR FABRICANTE (TOTAL 25 MOTOS)
+    const STOCK_MOTOS = [
+      // ================= HONDA (5 MOTOS) =================
+      {
+        id: 'cbr1000rr',
+        name: 'Honda CBR 1000RR-R Fireblade SP',
+        brand: 'Honda',
+        category: 'Sport',
+        year: 2026,
+        km: 0,
+        condition: '0 km',
+        price: 159000,
+        cc: '1000 cc',
+        power: '217,5 cv',
+        accel: '2.8 seg',
+        soundFreq: 220,
+        headlightPos: { top: '28%', left: '22%' },
+        color: 'Grand Prix Tricolor',
+        image: 'images/cbr1000rr_clean.png',
+        bgText: 'FIREBLADE',
+        desc: 'A lenda das pistas com motor de 217 cv, aerodinâmica com asas winglets e suspensão eletrônica Öhlins.',
+        badge: 'Super Sport'
+      },
+      {
+        id: 'cb650r',
+        name: 'Honda CB 650R Neo Sports Café',
+        brand: 'Honda',
+        category: 'Naked',
+        year: 2025,
+        km: 4200,
+        condition: 'Seminova',
+        price: 52900,
+        cc: '649 cc',
+        power: '88,4 cv',
+        accel: '3.6 seg',
+        soundFreq: 180,
+        headlightPos: { top: '30%', left: '25%' },
+        color: 'Vermelho Metálico',
+        image: 'images/cb650r_clean.png',
+        bgText: 'CB 650R',
+        desc: 'Motor 4 cilindros com ronco incomparável, controle de tração HSTC e embreagem deslizante. Único dono.',
+        badge: 'Naked 4 Cil'
+      },
+      {
+        id: 'sahara300',
+        name: 'Honda XRE 300 Sahara Rally ABS',
+        brand: 'Honda',
+        category: 'Trail',
+        year: 2026,
+        km: 0,
+        condition: '0 km',
+        price: 32900,
+        cc: '293 cc',
+        power: '25,2 cv',
+        accel: '8.4 seg',
+        soundFreq: 110,
+        headlightPos: { top: '22%', left: '26%' },
+        color: 'Vermelho Rally',
+        image: 'images/sahara300_clean.png',
+        bgText: 'SAHARA',
+        desc: 'Pronta para qualquer terreno. Câmbio 6 marchas, painel 100% digital e suspensão de longo curso.',
+        badge: 'Trail / Aventura'
+      },
+      {
+        id: 'cb300f',
+        name: 'Honda CB 300F Twister ABS',
+        brand: 'Honda',
+        category: 'Naked',
+        year: 2025,
+        km: 7800,
+        condition: 'Seminova',
+        price: 24900,
+        cc: '293 cc',
+        power: '24,7 cv',
+        accel: '7.9 seg',
+        soundFreq: 130,
+        headlightPos: { top: '32%', left: '24%' },
+        color: 'Dourado Metálico',
+        image: 'images/cb300f_clean.png',
+        bgText: 'TWISTER',
+        desc: 'Design agressivo streetfighter, iluminação Full LED, embreagem assistida e freios ABS nas duas rodas.',
+        badge: 'Naked Urbana'
+      },
+      {
+        id: 'cg160',
+        name: 'Honda CG 160 Titan FlexOne',
+        brand: 'Honda',
+        category: 'Street',
+        year: 2025,
+        km: 11200,
+        condition: 'Seminova',
+        price: 18500,
+        cc: '162 cc',
+        power: '15,1 cv',
+        accel: '12.5 seg',
+        soundFreq: 95,
+        headlightPos: { top: '34%', left: '26%' },
+        color: 'Vermelho Perolizado',
+        image: 'images/cg160_clean.png',
+        bgText: 'TITAN 160',
+        desc: 'A rainha da economia e durabilidade. Faz mais de 40 km/l, perfeita para o dia a dia e trabalho.',
+        badge: 'Mais Vendida'
+      },
+
+      // ================= YAMAHA (5 MOTOS) =================
+      {
+        id: 'yamaha-mt09',
+        name: 'Yamaha MT-09 Connected ABS QuickShift',
+        brand: 'Yamaha',
+        category: 'Naked',
+        year: 2025,
+        km: 3400,
+        condition: 'Seminova',
+        price: 64900,
+        cc: '890 cc',
+        power: '119 cv',
+        accel: '3.4 seg',
+        soundFreq: 195,
+        headlightPos: { top: '28%', left: '24%' },
+        color: 'Cyan Storm',
+        image: 'images/cb650r_clean.png',
+        bgText: 'MT-09 CP3',
+        desc: 'Motor Crossplane 3 cilindros com torque insano, QuickShift bidirecional e painel TFT multifuncional.',
+        badge: 'Torque Master'
+      },
+      {
+        id: 'yamaha-mt03',
+        name: 'Yamaha MT-03 ABS Connected',
+        brand: 'Yamaha',
+        category: 'Naked',
+        year: 2025,
+        km: 6100,
+        condition: 'Seminova',
+        price: 33900,
+        cc: '321 cc',
+        power: '42 cv',
+        accel: '5.2 seg',
+        soundFreq: 160,
+        headlightPos: { top: '30%', left: '25%' },
+        color: 'Midnight Black',
+        image: 'images/cb300f_clean.png',
+        bgText: 'MT-03',
+        desc: 'Bicilíndrico de alto giro, suspensão invertida dianteira e visual com luzes diurnas DRL em LED.',
+        badge: 'Naked Bicilíndrica'
+      },
+      {
+        id: 'yamaha-fz25',
+        name: 'Yamaha FZ25 Fazer Connected ABS',
+        brand: 'Yamaha',
+        category: 'Street',
+        year: 2025,
+        km: 8900,
+        condition: 'Seminova',
+        price: 23900,
+        cc: '249 cc',
+        power: '21,5 cv',
+        accel: '8.9 seg',
+        soundFreq: 120,
+        headlightPos: { top: '32%', left: '24%' },
+        color: 'Azul Metálico',
+        image: 'images/cg160_clean.png',
+        bgText: 'FAZER FZ25',
+        desc: 'Projetor LED bifuncional, freio a disco com ABS nas duas rodas e conectividade Y-Connect no celular.',
+        badge: 'Street Premium'
+      },
+      {
+        id: 'yamaha-lander',
+        name: 'Yamaha XTZ 250 Lander Connected ABS',
+        brand: 'Yamaha',
+        category: 'Trail',
+        year: 2026,
+        km: 0,
+        condition: '0 km',
+        price: 28500,
+        cc: '249 cc',
+        power: '20,9 cv',
+        accel: '9.5 seg',
+        soundFreq: 115,
+        headlightPos: { top: '23%', left: '25%' },
+        color: 'Competition Blue',
+        image: 'images/sahara300_clean.png',
+        bgText: 'LANDER 250',
+        desc: 'Conforto total com assento em dois níveis, excelente ciclística para cidade e terra com motor confiável.',
+        badge: 'Trail Aventura'
+      },
+      {
+        id: 'yamaha-xmax',
+        name: 'Yamaha XMAX 250 ABS Smart Key',
+        brand: 'Yamaha',
+        category: 'Scooter',
+        year: 2025,
+        km: 4800,
+        condition: 'Seminova',
+        price: 34500,
+        cc: '250 cc',
+        power: '22,8 cv',
+        accel: '10.2 seg',
+        soundFreq: 90,
+        headlightPos: { top: '32%', left: '22%' },
+        color: 'Matt Dark Grey',
+        image: 'images/pcx160_clean.png',
+        bgText: 'XMAX 250',
+        desc: 'Controle de tração TCS, parabrisa ajustável, chave presencial e espaço para 2 capacetes fechados.',
+        badge: 'Maxi Scooter'
+      },
+
+      // ================= BMW MOTORRAD (5 MOTOS) =================
+      {
+        id: 'bmw-s1000rr',
+        name: 'BMW S 1000 RR M Carbon Package',
+        brand: 'BMW',
+        category: 'Sport',
+        year: 2025,
+        km: 2100,
+        condition: 'Seminova',
+        price: 139900,
+        cc: '999 cc',
+        power: '210 cv',
+        accel: '3.1 seg',
+        soundFreq: 230,
+        headlightPos: { top: '28%', left: '22%' },
+        color: 'M Motorsport Light White',
+        image: 'images/cbr_sport_clean.png',
+        bgText: 'S 1000 RR',
+        desc: 'Superbike alemã de 210 cv com ShiftCam, pacote M de rodas de carbono e modos de pilotagem Pro.',
+        badge: 'German Superbike'
+      },
+      {
+        id: 'bmw-r1250gs',
+        name: 'BMW R 1250 GS Adventure Triple Black',
+        brand: 'BMW',
+        category: 'Trail',
+        year: 2024,
+        km: 12400,
+        condition: 'Seminova',
+        price: 114900,
+        cc: '1254 cc',
+        power: '136 cv',
+        accel: '3.6 seg',
+        soundFreq: 140,
+        headlightPos: { top: '22%', left: '25%' },
+        color: 'Triple Black Edition',
+        image: 'images/sahara300_clean.png',
+        bgText: 'R 1250 GS',
+        desc: 'A rainha das viagens mundiais. Motor Boxer bicilíndrico de 136 cv, suspensão Dynamic ESA e tanque de 30L.',
+        badge: 'Maxi Trail Líder'
+      },
+      {
+        id: 'bmw-f850gs',
+        name: 'BMW F 850 GS Premium Pro TFT',
+        brand: 'BMW',
+        category: 'Trail',
+        year: 2024,
+        km: 9800,
+        condition: 'Seminova',
+        price: 68900,
+        cc: '853 cc',
+        power: '80 cv',
+        accel: '4.1 seg',
+        soundFreq: 145,
+        headlightPos: { top: '24%', left: '25%' },
+        color: 'Rallye Style',
+        image: 'images/sahara300_clean.png',
+        bgText: 'F 850 GS',
+        desc: 'Rodas raiadas aro 21 na dianteira, painel TFT com navegação, quickshifter e controle dinâmico de tração.',
+        badge: 'Big Trail Pro'
+      },
+      {
+        id: 'bmw-g310gs',
+        name: 'BMW G 310 GS Adventure ABS',
+        brand: 'BMW',
+        category: 'Trail',
+        year: 2025,
+        km: 5300,
+        condition: 'Seminova',
+        price: 36900,
+        cc: '313 cc',
+        power: '34 cv',
+        accel: '7.5 seg',
+        soundFreq: 135,
+        headlightPos: { top: '26%', left: '26%' },
+        color: 'Kalo Grey Metálico',
+        image: 'images/sahara300_clean.png',
+        bgText: 'G 310 GS',
+        desc: 'Porta de entrada premium da BMW. Motor monocilíndrico invertido, iluminação Full LED e embreagem anti-bloqueio.',
+        badge: 'Mini GS'
+      },
+      {
+        id: 'bmw-f900r',
+        name: 'BMW F 900 R Sport Dynamic ABS',
+        brand: 'BMW',
+        category: 'Naked',
+        year: 2025,
+        km: 3900,
+        condition: 'Seminova',
+        price: 69900,
+        cc: '895 cc',
+        power: '105 cv',
+        accel: '3.7 seg',
+        soundFreq: 175,
+        headlightPos: { top: '30%', left: '25%' },
+        color: 'San Marino Blue',
+        image: 'images/cb650r_clean.png',
+        bgText: 'F 900 R',
+        desc: 'Roadster esportiva alemã com 105 cv, iluminação adaptativa em curvas e suspensão eletrônica ESA.',
+        badge: 'Naked Roadster'
+      },
+
+      // ================= KAWASAKI (5 MOTOS) =================
+      {
+        id: 'kawa-ninja-zx10r',
+        name: 'Kawasaki Ninja ZX-10R KRT Edition',
+        brand: 'Kawasaki',
+        category: 'Sport',
+        year: 2025,
+        km: 1800,
+        condition: 'Seminova',
+        price: 119900,
+        cc: '998 cc',
+        power: '203 cv',
+        accel: '2.9 seg',
+        soundFreq: 225,
+        headlightPos: { top: '28%', left: '23%' },
+        color: 'Lime Green KRT',
+        image: 'images/cbr1000rr_clean.png',
+        bgText: 'NINJA ZX-10R',
+        desc: 'Hexacampeã do Mundial de Superbike. Asas aerodinâmicas integradas, freios Brembo M50 e launch control.',
+        badge: 'WorldSBK Champ'
+      },
+      {
+        id: 'kawa-z900',
+        name: 'Kawasaki Z900 ABS Sugomi Edition',
+        brand: 'Kawasaki',
+        category: 'Naked',
+        year: 2025,
+        km: 4500,
+        condition: 'Seminova',
+        price: 59900,
+        cc: '948 cc',
+        power: '125 cv',
+        accel: '3.4 seg',
+        soundFreq: 190,
+        headlightPos: { top: '31%', left: '24%' },
+        color: 'Metallic Spark Black',
+        image: 'images/cb650r_clean.png',
+        bgText: 'KAWASAKI Z900',
+        desc: 'Design Sugomi agressivo, 4 cilindros em linha com 125 cv, modos de potência integrados e painel TFT.',
+        badge: 'Super Naked 4 Cil'
+      },
+      {
+        id: 'kawa-versys650',
+        name: 'Kawasaki Versys 650 Tourer Plus',
+        brand: 'Kawasaki',
+        category: 'Trail',
+        year: 2024,
+        km: 8200,
+        condition: 'Seminova',
+        price: 49900,
+        cc: '649 cc',
+        power: '67 cv',
+        accel: '4.9 seg',
+        soundFreq: 155,
+        headlightPos: { top: '24%', left: '25%' },
+        color: 'Candy Lime Green',
+        image: 'images/sahara300_clean.png',
+        bgText: 'VERSYS 650',
+        desc: 'Equipada com baús laterais originais, parabrisa ajustável em 4 posições, controle de tração KTRC e ABS.',
+        badge: 'Crossover Tourer'
+      },
+      {
+        id: 'kawa-ninja400',
+        name: 'Kawasaki Ninja 400 KRT Edition ABS',
+        brand: 'Kawasaki',
+        category: 'Sport',
+        year: 2025,
+        km: 6700,
+        condition: 'Seminova',
+        price: 34900,
+        cc: '399 cc',
+        power: '48 cv',
+        accel: '5.0 seg',
+        soundFreq: 165,
+        headlightPos: { top: '29%', left: '24%' },
+        color: 'Lime Green / Ebony',
+        image: 'images/cbr_sport_clean.png',
+        bgText: 'NINJA 400',
+        desc: 'A esportiva mais potente da categoria. Chassi treliça ultra leve, embreagem assistida e deslizante.',
+        badge: 'Sport Ninja'
+      },
+      {
+        id: 'kawa-vulcan650',
+        name: 'Kawasaki Vulcan S 650 ABS Café',
+        brand: 'Kawasaki',
+        category: 'Classic',
+        year: 2024,
+        km: 7100,
+        condition: 'Seminova',
+        price: 46900,
+        cc: '649 cc',
+        power: '61 cv',
+        accel: '5.3 seg',
+        soundFreq: 140,
+        headlightPos: { top: '34%', left: '25%' },
+        color: 'Ebony Matte',
+        image: 'images/cb500f_clean.png',
+        bgText: 'VULCAN S',
+        desc: 'Custom moderna com motor esportivo bicilíndrico, assento ultra baixo e ergonomia ajustável Ergo-Fit.',
+        badge: 'Custom Moderna'
+      },
+
+      // ================= TRIUMPH (5 MOTOS) =================
+      {
+        id: 'triumph-tiger900',
+        name: 'Triumph Tiger 900 Rally Pro',
+        brand: 'Triumph',
+        category: 'Trail',
+        year: 2025,
+        km: 3800,
+        condition: 'Seminova',
+        price: 79900,
+        cc: '888 cc',
+        power: '108 cv',
+        accel: '3.8 seg',
+        soundFreq: 170,
+        headlightPos: { top: '23%', left: '25%' },
+        color: 'Ash Grey / Intense Orange',
+        image: 'images/sahara300_clean.png',
+        bgText: 'TIGER 900',
+        desc: 'Motor tricilíndrico T-Plane com som inconfundível, suspensão Showa off-road, quickshifter e 6 modos de pilotagem.',
+        badge: 'Aventura Premium'
+      },
+      {
+        id: 'triumph-street765',
+        name: 'Triumph Street Triple 765 RS',
+        brand: 'Triumph',
+        category: 'Naked',
+        year: 2025,
+        km: 2900,
+        condition: 'Seminova',
+        price: 67900,
+        cc: '765 cc',
+        power: '130 cv',
+        accel: '3.2 seg',
+        soundFreq: 215,
+        headlightPos: { top: '30%', left: '24%' },
+        color: 'Carnival Red',
+        image: 'images/cb650r_clean.png',
+        bgText: 'STREET TRIPLE',
+        desc: 'Motor derivado diretamente da Moto2™ com 130 cv, pinças Brembo Stylema e suspensão traseira Öhlins.',
+        badge: 'Moto2 DNA'
+      },
+      {
+        id: 'triumph-speed400',
+        name: 'Triumph Speed 400 Modern Classic',
+        brand: 'Triumph',
+        category: 'Classic',
+        year: 2025,
+        km: 1400,
+        condition: 'Seminova',
+        price: 29900,
+        cc: '398 cc',
+        power: '40 cv',
+        accel: '6.8 seg',
+        soundFreq: 130,
+        headlightPos: { top: '32%', left: '25%' },
+        color: 'Carnival Red / Storm Grey',
+        image: 'images/cb300f_clean.png',
+        bgText: 'SPEED 400',
+        desc: 'Elegância britânica clássica, motor monocilíndrico TR-Series de 40 cv com refrigeração líquida e acabamento premium.',
+        badge: 'Modern Classic'
+      },
+      {
+        id: 'triumph-scrambler400',
+        name: 'Triumph Scrambler 400 X',
+        brand: 'Triumph',
+        category: 'Trail',
+        year: 2025,
+        km: 2200,
+        condition: 'Seminova',
+        price: 33900,
+        cc: '398 cc',
+        power: '40 cv',
+        accel: '7.1 seg',
+        soundFreq: 130,
+        headlightPos: { top: '26%', left: '25%' },
+        color: 'Matt Khaki Green',
+        image: 'images/sahara300_clean.png',
+        bgText: 'SCRAMBLER 400',
+        desc: 'Espírito aventureiro scrambler, suspensão de curso longo, protetor de farol, pedaleiras off-road e ABS comutável.',
+        badge: 'Scrambler Britânica'
+      },
+      {
+        id: 'triumph-rocket3',
+        name: 'Triumph Rocket 3 R 2500cc',
+        brand: 'Triumph',
+        category: 'Classic',
+        year: 2024,
+        km: 4100,
+        condition: 'Seminova',
+        price: 132000,
+        cc: '2458 cc',
+        power: '167 cv',
+        accel: '2.7 seg',
+        soundFreq: 140,
+        headlightPos: { top: '32%', left: '24%' },
+        color: 'Korosi Red',
+        image: 'images/cb500f_clean.png',
+        bgText: 'ROCKET 3 R',
+        desc: 'O maior motor do mundo em uma moto de produção: 2.500 cc com 22,5 kgfm de torque monumental e aceleração brutal.',
+        badge: 'Maior Motor do Mundo'
+      }
+    ];
+
+    let currentHeroIndex = 0;
+    let isHeroAnimating = false;
+    let heroAutoPlayInterval = null;
+
+    // Helper: format currency BRL
+    function formatBRL(value) {
+      return value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+    }
+
+    // RENDER HERO CAROUSEL DOTS
+    function renderHeroDots() {
+      const dotsContainer = document.getElementById('hero-carousel-dots');
+      if (!dotsContainer) return;
+      dotsContainer.innerHTML = STOCK_MOTOS.slice(0, 5).map((_, i) => `
+        <button onclick="switchHeroBike(${i})" class="w-3 h-3 rounded-full transition-all duration-300 ${i === currentHeroIndex ? 'bg-vrum-yellow scale-125 shadow-glow-yellow-sm' : 'bg-gray-600 hover:bg-gray-400'}" aria-label="Ver destaque ${i+1}"></button>
+      `).join('');
+    }
+
+    // SWITCH HERO MOTORCYCLE
+    function switchHeroBike(newIndex, direction = null) {
+      if (newIndex === currentHeroIndex || isHeroAnimating) return;
+      isHeroAnimating = true;
+
+      const oldIndex = currentHeroIndex;
+      const isNext = direction !== null ? direction === 'next' : newIndex > oldIndex;
+      currentHeroIndex = newIndex;
+      const bike = STOCK_MOTOS[newIndex];
+
+      renderHeroDots();
+
+      // Animate Giant Text in Background
+      const bgText = document.getElementById('hero-bg-text');
+      if (bgText) {
+        bgText.style.opacity = '0';
+        bgText.style.transform = 'translate(-50%, -50%) scale(0.9)';
+      }
+
+      // Animate Bike Images
+      const primaryImg = document.getElementById('hero-bike-img-primary');
+      const secondaryImg = document.getElementById('hero-bike-img-secondary');
+      const flare = document.getElementById('headlight-flare');
+
+      if (flare && bike.headlightPos) {
+        flare.style.opacity = '0';
+      }
+
+      if (secondaryImg && primaryImg) {
+        secondaryImg.src = bike.image;
+        secondaryImg.alt = bike.name;
+        secondaryImg.className = 'bike-hero-render ' + (isNext ? 'slide-in-start-right' : 'slide-in-start-left');
+
+        void secondaryImg.offsetWidth; // Force reflow
+
+        primaryImg.className = 'bike-hero-render ' + (isNext ? 'slide-out-left' : 'slide-out-right');
+        secondaryImg.className = 'bike-hero-render slide-in-active';
+      }
+
+      // Update Card texts & HUD Telemetry
+      setTimeout(() => {
+        if (bgText) {
+          bgText.innerText = bike.bgText;
+          bgText.style.opacity = '1';
+          bgText.style.transform = 'translate(-50%, -50%) scale(1)';
+        }
+
+        const badgeEl = document.getElementById('hero-badge');
+        if (badgeEl) badgeEl.innerHTML = `<i class="fa-solid fa-bolt text-xs"></i> ${bike.badge}`;
+        
+        const yearKmEl = document.getElementById('hero-year-km');
+        if (yearKmEl) yearKmEl.innerText = `${bike.year} • ${bike.km === 0 ? '0 km' : bike.km.toLocaleString('pt-BR') + ' km'}`;
+        
+        const titleEl = document.getElementById('hero-model-title');
+        if (titleEl) titleEl.innerText = bike.name;
+        
+        const descEl = document.getElementById('hero-model-desc');
+        if (descEl) descEl.innerText = bike.desc;
+        
+        const priceEl = document.getElementById('hero-model-price');
+        if (priceEl) priceEl.innerText = formatBRL(bike.price);
+
+        // Update Telemetry Specs
+        const powerEl = document.getElementById('hero-spec-power');
+        if (powerEl) powerEl.innerText = bike.power;
+
+        const ccEl = document.getElementById('hero-spec-cc');
+        if (ccEl) ccEl.innerText = bike.cc;
+
+        const accelEl = document.getElementById('hero-spec-accel');
+        if (accelEl) accelEl.innerText = bike.accel;
+
+        // Reposition Headlight Flare
+        if (flare && bike.headlightPos) {
+          flare.style.top = bike.headlightPos.top;
+          flare.style.left = bike.headlightPos.left;
+          flare.style.opacity = '1';
+        }
+
+        const wppBtn = document.getElementById('hero-whatsapp-btn');
+        if (wppBtn) {
+          wppBtn.href = `https://wa.me/5532999292311?text=${encodeURIComponent('Olá! Tenho interesse na ' + bike.name + ' anunciada na Vrum Motos em Ubá!')}`;
+        }
+      }, 220);
+
+      setTimeout(() => {
+        if (primaryImg && secondaryImg) {
+          primaryImg.src = bike.image;
+          primaryImg.alt = bike.name;
+          primaryImg.className = 'bike-hero-render slide-in-active';
+          secondaryImg.className = 'bike-hero-render opacity-0';
+        }
+        isHeroAnimating = false;
+      }, 850);
+    }
+
+    // Hero Navigation Buttons
+    const prevBtn = document.getElementById('hero-prev-btn');
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const total = Math.min(5, STOCK_MOTOS.length);
+        const newIdx = (currentHeroIndex - 1 + total) % total;
+        switchHeroBike(newIdx, 'prev');
+        restartAutoPlay();
+      });
+    }
+
+    const nextBtn = document.getElementById('hero-next-btn');
+    if (nextBtn) {
+      nextBtn.addEventListener('click', () => {
+        const total = Math.min(5, STOCK_MOTOS.length);
+        const newIdx = (currentHeroIndex + 1) % total;
+        switchHeroBike(newIdx, 'next');
+        restartAutoPlay();
+      });
+    }
+
+    // AUTO-PLAY HERO CAROUSEL (1 minuto = 60000ms)
+    function startAutoPlay() {
+      heroAutoPlayInterval = setInterval(() => {
+        const total = Math.min(5, STOCK_MOTOS.length);
+        const newIdx = (currentHeroIndex + 1) % total;
+        switchHeroBike(newIdx, 'next');
+      }, 60000);
+    }
+
+    function stopAutoPlay() {
+      if (heroAutoPlayInterval) clearInterval(heroAutoPlayInterval);
+    }
+
+    function restartAutoPlay() {
+      stopAutoPlay();
+      startAutoPlay();
+    }
+
+    // 3D MOUSE PARALLAX & TILT ON MOTORCYCLE STAGE
+    function initMouseParallax() {
+      const heroSection = document.getElementById('hero-showcase');
+      const stage = document.getElementById('bike-stage-interactive');
+      const bgText = document.getElementById('hero-bg-text');
+      const groundShadow = document.getElementById('hero-ground-shadow');
+
+      if (!heroSection || !stage) return;
+
+      let targetRotateX = 0;
+      let targetRotateY = 0;
+      let targetTransX = 0;
+      let targetBgX = 0;
+      let currentRotateX = 0;
+      let currentRotateY = 0;
+      let currentTransX = 0;
+      let currentBgX = 0;
+
+      heroSection.addEventListener('mousemove', (e) => {
+        const rect = heroSection.getBoundingClientRect();
+        const x = (e.clientX - rect.left) / rect.width - 0.5; // -0.5 to 0.5
+        const y = (e.clientY - rect.top) / rect.height - 0.5; // -0.5 to 0.5
+
+        targetRotateY = x * 18; // Max 9 deg tilt
+        targetRotateX = -y * 14; // Max 7 deg pitch
+        targetTransX = x * 25; // Lateral move
+        targetBgX = -x * 40; // Inverse parallax for background text
+      });
+
+      heroSection.addEventListener('mouseleave', () => {
+        targetRotateX = 0;
+        targetRotateY = 0;
+        targetTransX = 0;
+        targetBgX = 0;
+      });
+
+      // Pause carousel on hover
+      heroSection.addEventListener('mouseenter', stopAutoPlay);
+      heroSection.addEventListener('mouseleave', startAutoPlay);
+
+      function renderFrame() {
+        // Smooth lerp
+        currentRotateX += (targetRotateX - currentRotateX) * 0.08;
+        currentRotateY += (targetRotateY - currentRotateY) * 0.08;
+        currentTransX += (targetTransX - currentTransX) * 0.08;
+        currentBgX += (targetBgX - currentBgX) * 0.08;
+
+        stage.style.transform = `perspective(1200px) rotateX(${currentRotateX.toFixed(2)}deg) rotateY(${currentRotateY.toFixed(2)}deg) translateX(${currentTransX.toFixed(2)}px)`;
+
+        if (groundShadow) {
+          groundShadow.style.transform = `translateX(${(-currentTransX * 0.5).toFixed(2)}px) scaleX(${1 + Math.abs(currentRotateY) * 0.01})`;
+        }
+
+        if (bgText) {
+          bgText.style.transform = `translate(calc(-50% + ${currentBgX.toFixed(2)}px), -50%)`;
+        }
+
+        requestAnimationFrame(renderFrame);
+      }
+      renderFrame();
+    }
+
+    // 60 FPS GOLDEN SPARKS / EMBERS CANVAS ANIMATION
+    function initSparksCanvas() {
+      const canvas = document.getElementById('hero-sparks-canvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width = (canvas.width = canvas.offsetWidth);
+      let height = (canvas.height = canvas.offsetHeight);
+
+      window.addEventListener('resize', () => {
+        width = canvas.width = canvas.offsetWidth;
+        height = canvas.height = canvas.offsetHeight;
+      });
+
+      const particleCount = 45;
+      const particles = [];
+
+      class Spark {
+        constructor() {
+          this.reset(true);
+        }
+        reset(initial = false) {
+          this.x = Math.random() * width;
+          this.y = initial ? Math.random() * height : height + 10 + Math.random() * 20;
+          this.size = Math.random() * 2.5 + 0.8;
+          this.speedY = Math.random() * 1.8 + 0.6;
+          this.speedX = (Math.random() - 0.5) * 1.2;
+          this.alpha = Math.random() * 0.8 + 0.2;
+          this.decay = Math.random() * 0.006 + 0.003;
+          this.color = Math.random() > 0.3 ? '#FFB800' : '#FFF0B3';
+          this.wobble = Math.random() * Math.PI * 2;
+          this.wobbleSpeed = Math.random() * 0.05 + 0.02;
+        }
+        update() {
+          this.y -= this.speedY;
+          this.wobble += this.wobbleSpeed;
+          this.x += this.speedX + Math.sin(this.wobble) * 0.6;
+          this.alpha -= this.decay;
+
+          if (this.y < -10 || this.alpha <= 0) {
+            this.reset();
+          }
+        }
+        draw() {
+          ctx.save();
+          ctx.globalAlpha = Math.max(0, this.alpha);
+          ctx.fillStyle = this.color;
+          ctx.shadowColor = '#FFB800';
+          ctx.shadowBlur = this.size * 4;
+          ctx.beginPath();
+          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.restore();
+        }
+      }
+
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Spark());
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, width, height);
+        particles.forEach(p => {
+          p.update();
+          p.draw();
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    }
+
+    // WEB AUDIO SYNTHESIZER: REALISTIC MOTORCYCLE ENGINE REV
+    let audioCtx = null;
+    let isPlayingSound = false;
+
+    function playEngineRev() {
+      if (isPlayingSound) return;
+      isPlayingSound = true;
+
+      const currentBike = STOCK_MOTOS[currentHeroIndex];
+      const baseFreq = currentBike.soundFreq || 160;
+
+      const btnText = document.getElementById('sound-btn-text');
+      const soundBtn = document.getElementById('btn-engine-sound');
+      if (btnText) btnText.innerText = 'Acelerando ' + currentBike.name.split(' ')[1] + '...';
+      if (soundBtn) soundBtn.classList.add('border-vrum-yellow', 'bg-vrum-yellow/20');
+
+      try {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (!audioCtx) audioCtx = new AudioContextClass();
+        if (audioCtx.state === 'suspended') audioCtx.resume();
+
+        const now = audioCtx.currentTime;
+        const duration = 2.4;
+
+        // Master gain
+        const masterGain = audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.01, now);
+        masterGain.gain.linearRampToValueAtTime(0.25, now + 0.1);
+        masterGain.gain.linearRampToValueAtTime(0.35, now + 0.7);
+        masterGain.gain.exponentialRampToValueAtTime(0.001, now + duration);
+        masterGain.connect(audioCtx.destination);
+
+        // Lowpass filter (exhaust resonator)
+        const filter = audioCtx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(baseFreq * 2, now);
+        filter.frequency.exponentialRampToValueAtTime(baseFreq * 7, now + 0.8);
+        filter.frequency.exponentialRampToValueAtTime(baseFreq * 2, now + duration);
+        filter.Q.value = 4;
+        filter.connect(masterGain);
+
+        // Primary Sawtooth Oscillator (cylinder combustion)
+        const osc1 = audioCtx.createOscillator();
+        osc1.type = 'sawtooth';
+        osc1.frequency.setValueAtTime(baseFreq * 0.6, now);
+        osc1.frequency.exponentialRampToValueAtTime(baseFreq * 2.8, now + 0.8); // Throttle blip
+        osc1.frequency.exponentialRampToValueAtTime(baseFreq * 0.7, now + duration);
+        osc1.connect(filter);
+
+        // Secondary Oscillator (harmonic vibration)
+        const osc2 = audioCtx.createOscillator();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(baseFreq * 0.3, now);
+        osc2.frequency.exponentialRampToValueAtTime(baseFreq * 1.4, now + 0.8);
+        osc2.frequency.exponentialRampToValueAtTime(baseFreq * 0.35, now + duration);
+        osc2.connect(filter);
+
+        osc1.start(now);
+        osc2.start(now);
+        osc1.stop(now + duration);
+        osc2.stop(now + duration);
+
+        setTimeout(() => {
+          if (btnText) btnText.innerText = 'Ouvir Ronco do Motor';
+          if (soundBtn) soundBtn.classList.remove('border-vrum-yellow', 'bg-vrum-yellow/20');
+          isPlayingSound = false;
+        }, duration * 1000);
+
+      } catch (err) {
+        console.warn('Web Audio error:', err);
+        setTimeout(() => {
+          if (btnText) btnText.innerText = 'Ouvir Ronco do Motor';
+          if (soundBtn) soundBtn.classList.remove('border-vrum-yellow', 'bg-vrum-yellow/20');
+          isPlayingSound = false;
+        }, 1000);
+      }
+    }
+
+    // RENDER STOCK GRID
+    function renderStock(bikes = STOCK_MOTOS) {
+      const grid = document.getElementById('stock-grid');
+      if (!grid) return;
+      if (bikes.length === 0) {
+        grid.innerHTML = `
+          <div class="col-span-full py-16 text-center text-gray-400">
+            <i class="fa-solid fa-motorcycle text-4xl mb-3 text-vrum-yellow"></i>
+            <h3 class="text-xl font-bold text-white mb-1">Nenhuma moto encontrada com esses filtros</h3>
+            <p class="text-xs">Tente ajustar seus termos de busca ou entre em contato com nossa equipe em Ubá.</p>
+          </div>
+        `;
+        return;
+      }
+
+      grid.innerHTML = bikes.map(bike => `
+        <div class="card-lift bg-[#121722] rounded-3xl overflow-hidden border border-white/10 hover:border-vrum-yellow/50 shadow-xl hover:shadow-[0_0_30px_rgba(255,184,0,0.25)] transition-all duration-300 flex flex-col justify-between group">
+          
+          <!-- Image Card Stage -->
+          <div class="relative bg-gradient-to-b from-[#18202F] to-[#10151F] p-6 flex items-center justify-center min-h-[240px] border-b border-white/5 overflow-hidden">
+            <!-- Badges -->
+            <div class="absolute top-4 left-4 z-10 flex flex-col gap-1.5">
+              <span class="bg-vrum-yellow text-vrum-dark text-[10px] font-black uppercase px-2.5 py-1 rounded-md shadow-md">
+                ${bike.condition}
+              </span>
+              <span class="bg-black/60 backdrop-blur-md text-white text-[10px] font-bold px-2 py-0.5 rounded border border-white/10">
+                ${bike.brand}
+              </span>
+            </div>
+
+            <div class="absolute top-4 right-4 z-10">
+              <span class="bg-emerald-950/80 text-emerald-400 text-[10px] font-bold px-2.5 py-1 rounded-full border border-emerald-500/30">
+                <i class="fa-solid fa-check text-[9px]"></i> Laudo 100%
+              </span>
+            </div>
+
+            <!-- Bike Photo -->
+            <img src="${bike.image}" alt="${bike.name}" class="w-full max-w-[280px] h-44 object-contain filter drop-shadow-xl transform group-hover:scale-105 transition-transform duration-300" / loading="lazy" decoding="async">
+          </div>
+
+          <!-- Content Details -->
+          <div class="p-6 flex-1 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between text-xs text-gray-400 mb-1">
+                <span><i class="fa-regular fa-calendar text-vrum-yellow mr-1"></i> ${bike.year}</span>
+                <span><i class="fa-solid fa-gauge-high text-vrum-yellow mr-1"></i> ${bike.km === 0 ? '0 km' : bike.km.toLocaleString('pt-BR') + ' km'}</span>
+                <span><i class="fa-solid fa-bolt text-vrum-yellow mr-1"></i> ${bike.cc}</span>
+              </div>
+
+              <h3 class="font-montserrat font-bold text-lg text-white group-hover:text-vrum-yellow transition-colors leading-tight mb-3">
+                ${bike.name}
+              </h3>
+
+              <div class="space-y-1 mb-5">
+                <div class="text-[11px] text-gray-400">Preço à Vista:</div>
+                <div class="font-montserrat font-black text-2xl text-vrum-yellow tracking-tight">
+                  ${formatBRL(bike.price)}
+                </div>
+                <div class="text-[11px] text-gray-400">
+                  Ou parcele no cartão em até <strong class="text-white">21x</strong> / Financie
+                </div>
+              </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="pt-4 border-t border-white/10 flex items-center gap-2">
+              <a href="https://wa.me/5532999292311?text=${encodeURIComponent('Olá! Gostaria de mais informações e fotos da ' + bike.name + ' ano ' + bike.year + ' (' + formatBRL(bike.price) + ') anunciada na Vrum Motos Ubá!')}" target="_blank" class="w-full bg-vrum-yellow hover:bg-vrum-gold text-vrum-dark font-montserrat font-bold text-xs uppercase tracking-wider py-3 px-4 rounded-xl transition flex items-center justify-center gap-2 shadow-sm" rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp text-base text-emerald-900"></i>
+                <span>Tenho Interesse</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      `).join('');
+    }
+
+    // FILTER LOGIC
+    function applyStockFilters() {
+      const sort = document.getElementById('filter-sort').value;
+      const brand = document.getElementById('filter-brand').value;
+      const category = document.getElementById('filter-category').value;
+      const query = document.getElementById('filter-search').value.toLowerCase().trim();
+
+      let filtered = STOCK_MOTOS.filter(bike => {
+        const matchesBrand = brand === 'all' || bike.brand === brand;
+        const matchesCat = category === 'all' || bike.category === category;
+        const matchesQuery = !query || bike.name.toLowerCase().includes(query) || bike.brand.toLowerCase().includes(query) || bike.category.toLowerCase().includes(query);
+        return matchesBrand && matchesCat && matchesQuery;
+      });
+
+      if (sort === 'price-asc') filtered.sort((a, b) => a.price - b.price);
+      if (sort === 'price-desc') filtered.sort((a, b) => b.price - a.price);
+      if (sort === 'year-desc') filtered.sort((a, b) => b.year - a.year);
+
+      renderStock(filtered);
+    }
+
+    // FILTER BY BRAND (DIRECT FROM BRAND CARDS)
+    function filterByBrand(brand) {
+      const brandSelect = document.getElementById('filter-brand');
+      if (brandSelect) {
+        brandSelect.value = brand;
+      }
+      const catSelect = document.getElementById('filter-category');
+      if (catSelect) catSelect.value = 'all';
+
+      const searchInput = document.getElementById('filter-search');
+      if (searchInput) searchInput.value = '';
+
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.className = 'cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300';
+      });
+      const allPill = document.querySelector('.cat-pill');
+      if (allPill) allPill.className = 'cat-pill active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-vrum-yellow text-vrum-dark shadow-glow-yellow-sm';
+
+      applyStockFilters();
+
+      const estoqueSec = document.getElementById('estoque');
+      if (estoqueSec) {
+        estoqueSec.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function filterCategoryPill(cat) {
+      document.querySelectorAll('.cat-pill').forEach(btn => {
+        btn.className = 'cat-pill px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-white/5 hover:bg-white/10 text-gray-300';
+      });
+      event.target.className = 'cat-pill active px-4 py-2 rounded-xl text-xs font-bold uppercase tracking-wider transition bg-vrum-yellow text-vrum-dark shadow-glow-yellow-sm';
+
+      const catSelect = document.getElementById('filter-category');
+      if (catSelect) catSelect.value = cat;
+
+      applyStockFilters();
+    }
+
+    // EVENT LISTENERS FOR FILTERS
+    const sortEl = document.getElementById('filter-sort');
+    if (sortEl) sortEl.addEventListener('change', applyStockFilters);
+
+    const brandEl = document.getElementById('filter-brand');
+    if (brandEl) brandEl.addEventListener('change', applyStockFilters);
+
+    const catEl = document.getElementById('filter-category');
+    if (catEl) catEl.addEventListener('change', applyStockFilters);
+
+    const searchEl = document.getElementById('filter-search');
+    if (searchEl) searchEl.addEventListener('input', applyStockFilters);
+
+    // FORM EVALUATION SEND TO WHATSAPP
+    function sendEvaluationForm(e) {
+      e.preventDefault();
+      const model = document.getElementById('eval-model').value;
+      const year = document.getElementById('eval-year').value;
+      const km = document.getElementById('eval-km').value;
+      const goal = document.getElementById('eval-goal').value === 'troca' ? 'Dar na Troca' : 'Apenas Vender';
+      const name = document.getElementById('eval-name').value;
+      const phone = document.getElementById('eval-phone').value;
+
+      const message = `Olá Vrum Motos Ubá!\nQuero simular a avaliação da minha moto:\n👤 *Nome:* ${name}\n📱 *Contato:* ${phone}\n🏍️ *Moto:* ${model}\n📅 *Ano:* ${year}\n🛣️ *Km:* ${km}\n🎯 *Objetivo:* ${goal}\nAguardo a avaliação!`;
+      
+      window.open(`https://wa.me/5532999292311?text=${encodeURIComponent(message)}`, '_blank');
+    }
+
+    // FAQ ACCORDION
+    document.querySelectorAll('.faq-toggle').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.parentElement;
+        const content = item.querySelector('.faq-content');
+        const icon = btn.querySelector('i');
+        const isHidden = content.classList.contains('hidden');
+
+        document.querySelectorAll('.faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('.faq-toggle i').forEach(i => i.classList.remove('rotate-180'));
+
+        if (isHidden) {
+          content.classList.remove('hidden');
+          icon.classList.add('rotate-180');
+        }
+      });
+    });
+
+    // MOBILE MENU
+    const mobBtn = document.getElementById('mobile-menu-btn');
+    const mobMenu = document.getElementById('mobile-menu');
+    if (mobBtn && mobMenu) {
+      mobBtn.addEventListener('click', () => mobMenu.classList.toggle('hidden'));
+      document.querySelectorAll('.mobile-link').forEach(link => {
+        link.addEventListener('click', () => mobMenu.classList.add('hidden'));
+      });
+    }
+
+    // SCROLL PROGRESS & REVEAL
+    window.addEventListener('scroll', () => {
+      const winScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      const scrollBar = document.getElementById('scroll-progress');
+      if (scrollBar) scrollBar.style.width = scrolled + '%';
+
+      const header = document.getElementById('main-header');
+      if (header) {
+        if (winScroll > 30) {
+          header.classList.add('shadow-2xl', 'bg-[#090C10]/98');
+        } else {
+          header.classList.remove('shadow-2xl', 'bg-[#090C10]/98');
+        }
+      }
+    });
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('active');
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // INIT ALL SYSTEMS
+    document.addEventListener('DOMContentLoaded', () => {
+      renderHeroDots();
+      renderStock();
+      initMouseParallax();
+      initSparksCanvas();
+      startAutoPlay();
+    });
+  </script>
+
+  <script src="../assets/js/motion-core.js"></script>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL: VÍDEO & QUALIDADE DE VIDA                                          -->
+  <!-- ========================================================================= -->
+  <div id="video-qv-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 hidden">
+    <div class="bg-white text-slate-900 rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border border-slate-200 relative animate-fade-in max-h-[90vh] overflow-y-auto">
+      <button onclick="closeVideoQvModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center transition shadow-sm z-10" title="Fechar">
+        <i class="fa-solid fa-xmark text-sm"></i>
+      </button>
+
+      <div class="flex items-center gap-2 mb-3">
+        <span class="px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold uppercase tracking-wider flex items-center gap-1.5">
+          <i class="fa-solid fa-heart-pulse"></i> Qualidade de Vida & Bem-Estar
+        </span>
+        <span class="text-xs text-slate-400">• Vídeo Exclusivo</span>
+      </div>
+
+      <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-2 leading-tight">
+        Adrenalina, Emoção e Segurança: A Paixão de Pilotar em Alto Nível
+      </h3>
+      <p class="text-xs sm:text-sm text-slate-600 mb-4 leading-relaxed">
+        Assista ao vídeo do ronco dos motores e da curadoria minuciosa dos modelos mais desejados do mercado mundial.
+      </p>
+      
+      <!-- Video Player Preview -->
+      <div class="aspect-video w-full rounded-2xl overflow-hidden relative bg-slate-950 shadow-inner group mb-5">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-between p-5 z-10">
+          <div class="self-end px-2.5 py-1 rounded-lg bg-black/60 backdrop-blur-md text-white text-[11px] font-mono font-semibold">
+            <i class="fa-solid fa-clock mr-1 text-emerald-400"></i> 01:45 min • Full HD
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="https://wa.me/5532999292311?text=Ol%C3%A1%2C%20assisti%20ao%20v%C3%ADdeo%20sobre%20qualidade%20de%20vida%20e%20quero%20mais%20informa%C3%A7%C3%B5es%20(Vrum Motos Performance)." target="_blank" rel="noopener noreferrer" class="w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-xl shadow-xl hover:scale-110 active:scale-95 transition-all shrink-0">
+              <i class="fa-solid fa-play ml-1"></i>
+            </a>
+            <div>
+              <p class="text-white font-bold text-sm sm:text-base leading-snug">Metodologia Focada no seu Bem-Estar</p>
+              <p class="text-emerald-300 text-xs">Garantia estendida, seguro simplificado e acessórios de proteção das melhores marcas</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3 Pilares de Qualidade de Vida -->
+      <div class="grid grid-cols-3 gap-2 sm:gap-3 py-3 border-y border-slate-100 mb-5 text-center text-xs">
+        <div class="p-2.5 rounded-xl bg-slate-50">
+          <i class="fa-solid fa-clock-rotate-left text-emerald-600 block text-base mb-1"></i>
+          <strong class="block text-slate-800 text-[11px] font-bold">Sem Fila e Sem Espera</strong>
+          <span class="text-[10px] text-slate-500">Respeito ao seu tempo</span>
+        </div>
+        <div class="p-2.5 rounded-xl bg-slate-50">
+          <i class="fa-solid fa-shield-halved text-emerald-600 block text-base mb-1"></i>
+          <strong class="block text-slate-800 text-[11px] font-bold">Segurança & Conforto</strong>
+          <span class="text-[10px] text-slate-500">Ambiente acolhedor</span>
+        </div>
+        <div class="p-2.5 rounded-xl bg-slate-50">
+          <i class="fa-solid fa-bolt text-emerald-600 block text-base mb-1"></i>
+          <strong class="block text-slate-800 text-[11px] font-bold">Fechamento em 1 Clique</strong>
+          <span class="text-[10px] text-slate-500">Sem burocracia</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a href="https://wa.me/5532999292311?text=Ol%C3%A1%2C%20quero%20fechar%20meu%20atendimento%20com%20prioridade%20e%20foco%20em%20qualidade%20de%20vida%20(Vrum Motos Performance)." target="_blank" rel="noopener noreferrer" class="flex-1 py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider text-center flex items-center justify-center gap-2 shadow-lg transition">
+          <i class="fa-brands fa-whatsapp text-base"></i> Fechar no WhatsApp com Prioridade
+        </a>
+        <button onclick="closeVideoQvModal(); scrollToFormFast();" class="py-3.5 px-5 rounded-xl bg-slate-900 hover:bg-black text-white font-bold text-xs uppercase tracking-wider text-center transition">
+          Preencher Formulário Online
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================================= -->
+  <!-- MOBILE BOTTOM STICKY BAR (CONVERSÃO EM 1 CLIQUE)                          -->
+  <!-- ========================================================================= -->
+  
+
+
+  <!-- JS HELPERS: VÍDEO QUALIDADE DE VIDA & 1-CLICK CONVERSION -->
+  <script>
+    function openVideoQvModal() {
+      const m = document.getElementById('video-qv-modal');
+      if (m) m.classList.remove('hidden');
+    }
+
+    function closeVideoQvModal() {
+      const m = document.getElementById('video-qv-modal');
+      if (m) m.classList.add('hidden');
+    }
+
+    function scrollToFormFast(serviceName) {
+      let target = document.getElementById('contato') || document.getElementById('agendamento') || document.getElementById('contato') || document.getElementById('simulador') || document.querySelector('form');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        target.classList.add('ring-4', 'ring-emerald-400/50');
+        setTimeout(() => target.classList.remove('ring-4', 'ring-emerald-400/50'), 1500);
+
+        setTimeout(() => {
+          const input = target.querySelector('input:not([type="hidden"])') || document.querySelector('input[type="text"], input[type="tel"]');
+          if (input) input.focus();
+        }, 600);
+      } else {
+        window.location.href = "https://wa.me/5532999292311?text=Ol%C3%A1%2C%20gostaria%20de%20fechar%20com%20poucos%20cliques%20(Vrum Motos Performance).";
+      }
+    }
+  </script>
+
+
+  <!-- ========================================================================= -->
+  <!-- ADR-002: MOBILE CONVERSION DOCK (1-TOQUE NO WHATSAPP)                     -->
+  <!-- ========================================================================= -->
+  <aside class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[#070A12]/95 backdrop-blur-md border-t border-slate-800 p-2.5 px-4 shadow-[0_-4px_25px_rgba(0,0,0,0.5)]">
+    <div class="flex items-center justify-between gap-3 max-w-lg mx-auto">
+      <div class="flex flex-col">
+        <span class="text-[10px] uppercase font-bold text-slate-400 leading-tight tracking-wider">Vrum Motos</span>
+        <span class="text-xs text-emerald-400 font-bold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span>Online agora</span>
+        </span>
+      </div>
+      <a href="https://wa.me/5532999292311?text=Olá!%20Gostaria%20de%20consultar%20as%20motos%20disponíveis%20na%20Vrum%20Motos." target="_blank" class="shimmer-btn flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-extrabold text-xs uppercase tracking-wider shadow-lg shadow-emerald-950/50 transition-transform active:scale-95" rel="noopener noreferrer">
+        <i class="fa-brands fa-whatsapp text-base"></i>
+        <span>Atendimento</span>
+      </a>
+    </div>
+  </aside>
+
+</body>
+</html>
